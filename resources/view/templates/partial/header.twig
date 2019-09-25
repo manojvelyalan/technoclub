@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+	<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>{{title}}</title>
+        <meta name="description" content="{{description}}">
+        <meta name="author" content="">
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="{{title}}" />
+        <meta property="og:description" content="{{description}}" />
+        <meta property="og:url" content="{{base_url()}}" />
+        <meta property="og:image" content="{{base_url()}}/img/logos/link-image.png" />
+        <!-- Google Fonts -->
+        <link href="{{base_url()}}/css/font1.css" rel='stylesheet' type='text/css'>
+        <link href="{{base_url()}}/css/font2.css" rel='stylesheet' type='text/css'>
+         <link rel="stylesheet" href="{{base_url()}}/css/fonts/font-awesome/css/font-awesome.min.css">
+       <!-- Library CSS -->
+
+        <link rel="stylesheet" href="{{base_url()}}/css/bootstrap.css">
+        <link rel="stylesheet" href="{{base_url()}}/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="{{base_url()}}/css/multiselect.css">
+
+        <link rel="stylesheet" href="{{base_url()}}/css/animations.css" media="screen">
+        <link rel="stylesheet" href="{{base_url()}}/css/superfish.css" media="screen">
+        <link rel="stylesheet" href="{{base_url()}}/css/revolution-slider/css/settings.css" media="screen">
+        <link rel="stylesheet" href="{{base_url()}}/css/revolution-slider/css/extralayers.css" media="screen">
+        <link rel="stylesheet" href="{{base_url()}}/css/prettyPhoto.css" media="screen">
+        <!-- Theme CSS -->
+        <link rel="stylesheet" href="{{base_url()}}/css/style.css?{{ "now"|date("m/d/Y") }}">
+        <!-- Skin -->
+        <link rel="stylesheet" href="{{base_url()}}/css/colors/orange.css" class="colors">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{{base_url()}}/css/theme-responsive.css">
+        <!-- Switcher CSS -->
+        <link href="{{base_url()}}/css/switcher.css" rel="stylesheet">
+        <link href="{{base_url()}}/css/spectrum.css" rel="stylesheet">
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="{{base_url()}}/img/ico/favicon.ico">
+
+        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <!--[if IE]>
+        <link rel="stylesheet" href="css/ie.css">
+        <![endif]-->
+    </head>
+    <body class="home">
+        <div class="page-mask">
+            <div class="page-loader">
+                <div class="spinner"></div>
+                Loading...
+            </div>
+        </div>
+        <!-- Wrap -->
+        <div class="wrap">
+            <!-- Header -->
+            <header id="header">
+
+                <!-- Main Header -->
+                <div class="main-header">
+                    <div class="container">
+                        <!-- TopNav -->
+                        <div class="topnav navbar-header">
+                            <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
+                            <i class="fa fa-angle-down icon-current"></i>
+                            </a>
+                        </div>
+                        <!-- /TopNav-->
+                        <!-- Logo -->
+                        <div class="logo pull-left">
+                            <h1>
+                                <a href="{{path_for('home')}}">
+                                <img class="logo-color" src="{{base_url()}}/img/logos/logo.png" alt="gallaxy" width="160" height="60">
+                                </a>
+                            </h1>
+                        </div>
+                        <!-- /Logo -->
+                        <!-- Mobile Menu -->
+                        <div class="mobile navbar-header">
+                            <a class="navbar-toggle" data-toggle="collapse" href=".navbar-collapse">
+                            <i class="fa fa-bars fa-2x"></i>
+                            </a>
+                        </div>
+                        <!-- /Mobile Menu -->
+                        <!-- Menu Start -->
+
+
+                        <nav class="collapse navbar-collapse menu">
+                            <ul class="nav navbar-nav sf-menu">
+
+                                    <li><a {{home | raw }} href="{{path_for('home')}}">Home </a> </li>
+                                    <li><a {{programOffered | raw}} href="{{path_for('technoclub')}}" class="sf-with-ul">Programs Offered</a></li>
+                                    <li>
+                                    <a {{programDescription | raw}} href="{{path_for('foundation')}}"> Program Description
+                                        <span class="sf-sub-indicator">
+                                            <i class="fa fa-angle-down "></i>
+                                        </span>
+                                    </a>
+                                    <ul>
+                                        <li><a href="{{path_for('foundation')}}" class="sf-with-ul">Computer Foundation </a></li>
+                                        <li><a href="{{path_for('codingpath')}}" class="sf-with-ul">Coding Path</a></li>
+                                        <li><a href="{{path_for('robotics')}}" class="sf-with-ul">Robotics</a></li>
+                                         <li><a href="{{path_for('digitalart')}}" class="sf-with-ul">Digital Art</a></li>
+                                    </ul>
+                                    </li>
+                                    <!--<li><a href="#" class="sf-with-ul"> Blog</a></li>-->
+                                    <li><a {{faq | raw }} href="{{path_for('faq')}}" class="sf-with-ul"> FAQs </a></li>
+
+                                    <li><a {{contact | raw }} href="{{path_for('contact')}}" class="sf-with-ul"> Contact</a></li>
+                                    <li><a {{register | raw}} href="{{path_for('studentregister')}}" class="sf-with-ul register_nav_link text-uppercase"> Register</a></li>
+
+                            </ul>
+                        </nav>
+                        <!-- /Menu -->
+
+                    </div>
+                </div>
+                <!-- /Main Header -->
+            </header>
+            <!-- /Header -->

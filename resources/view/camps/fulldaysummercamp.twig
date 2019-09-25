@@ -1,0 +1,278 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Tech and Art Summer Camps</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li>Full Day Summer Camp</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content margin-top60 margin-bottom60" id="summerCampaign">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <p>Techno Smart Kids offers project-based programs paving the path to STEAM education (Science, Technology, Engineering, Art and Math) for children, ages 6 – 14. Our goal is to encourage the qualities of inquisitiveness, self-reliance, and self-confidence in children. </p>
+                        <p>We offer <a href="{{path_for("halfdaysummercamp")}}">Half day</a> and <a href="{{path_for("fulldaysummercamp")}}">Full day</a>  camps. There are a variety of camps to choose from based on their interest and desire to learn new skill. Let you child gain these skills in a no stress, friendly and social setting with like-minded peers, making new friends , having fun and making great progress.</p>
+                        <p>Camp Location : <b>Pine Lake Community Club, 21333 SE 20th St, Sammamish, WA 98075</b></p>
+                        <a href="{{path_for("halfdaysummercamp")}}" class="btn btn-color pull-right hidden-xs">Half Day Camps</a>
+                    </div>
+                    <div class="text-center visible-xs">
+                        <a href="{{path_for("fulldaysummercamp")}}" class="btn btn-color">Full Day Camps</a><br><br>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register Here</a><br>
+                        <span class="pl-4"><small>Scroll right for camp rates and registration.</small></span>
+                    </div>
+                </div>
+                <div class="row margin-top15">
+                    <div class="col-sm-12 col-md-12"> 
+                        <div class="text-capitalize col-sm-12 col-md-12 summer_campaign_title">
+                            <span>Full day camps </span>
+                        </div>
+                        <div class="light_orange col-sm-12 col-md-12">
+                            <span class="summer_title_font">9AM - 4 PM</span><span class="pull-right summer_title_font"> Location : Pine Lake Community Club</span><br>
+                            <span class="pull-right"> Sammamish WA</span>                   
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row ">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="table-responsive">
+                           <table class="responsive-table table table-bordered table-striped" id="shopping-cart-table">
+                                <thead>
+                                    <tr>
+                                        <th></th> 
+                                        <th>Week</th>
+                                        <th>Full Day Camp (Combinationof two Camp Programs)</th>
+                                        <th>Age</th>
+                                        <th>Camp Fee/Week</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--<tr>
+                                        <td class="w-10">
+                                            <img width="70" height="70" title="Gaming / Animation with SCRATCH (Beginner/intermediate)" alt="" src="{{base_url()}}/img/content/campaign/scratch.jpg"><br><br>
+                                            <img width="70" height="70" title="Drawing Art - Cartoon & Character drawing By YR" alt="" src="{{base_url()}}/img/content/campaign/cartoondrawing.jpg">
+                                        </td>
+                                        <td class="w-10">July  15- 19</td>
+                                        <td>
+                                            <label><a href="{{path_for('gaming')}}"><b>AM:Gaming / Animation with SCRATCH (Beginner/Intermediate)</b></a></label>
+                                            <label class="margin-top60"><a href="{{path_for('cartoon')}}"><b>PM:  Drawing Art - Cartoon & Character drawing By YR</b></a></label>
+                                            
+                                        </td>
+                                        <td class="w-10">8-11 Yrs</td>
+                                        
+                                        <td class="w-10">495/week</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>-->
+                                   <!-- <tr>
+                                        <td class="w-10">
+                                            <img width="70" height="70" title="Art Smart – Drawing Workshop by YR" alt="" src="{{base_url()}}/img/content/campaign/artsmart.jpg"><br><br>
+                                            <img width="70" height="70" title=" PYTHON Coding1" alt="" src="{{base_url()}}/img/content/campaign/python.jpg">
+                                        </td>
+                                        <td class="w-10">July  15- 19</td>
+                                        <td>
+                                            <label><a href="{{path_for("artsmart")}}"><b>AM: Art Smart – Drawing Workshop by YR</b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("python1")}}"><b>PM:  PYTHON Coding - 1</b></a></label>
+                                        </td>
+                                        <td class="w-10">9-14 Yrs</td>
+                                        
+                                        <td class="w-10">530/week</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>-->
+                                   <!-- <tr>
+                                        <td class="w-10">
+                                            <img width="70" height="70" title="Computer Foundation with Art1" alt="" src="{{base_url()}}/img/content/campaign/digitalart-girls.jpg"><br><br>
+                                            <img width="70" height="70" title="Intro to SCRATCH Coding" alt="" src="{{base_url()}}/img/content/campaign/scratch.jpg">
+                                        </td>
+                                        <td class="w-10">July  22- 26</td>
+                                        <td>
+                                            <label><a href="{{path_for("art")}}"><b>AM: Computer Foundation with Art - 1</b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("introtoscratch")}}"><b>PM: Gaming and Animation - Scratch Coding 1, Beginner</b></a></label>
+                                        </td>
+                                        <td class="w-10">7-10 Yrs</td>
+                                        
+                                        <td class="w-10">520/week</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w-10">
+                                            <img width="70" height="70" title="Photography and Editing" alt="" src="{{base_url()}}/img/content/campaign/phtography.jpg"><br><br>
+                                            <img width="70" height="70" title="JAVA Programing1" alt="" src="{{base_url()}}/img/content/campaign/java.jpg">
+                                        </td>
+                                        <td class="w-10">July  22- 26</td>
+                                        <td>
+                                            <label><a href="{{path_for("imageediting")}}"><b>AM: Photography and Editing. </b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("java")}}"><b>PM: JAVA Programing - 1</b></a></label>
+                                        </td>
+                                        <td class="w-10">10-14 Yrs</td>
+                                        
+                                        <td class="w-10">610/week</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>-->
+                                    <tr>
+                                        <td class="w-10">
+                                            <img width="70" height="70" title="SCRATCH Coding " alt="" src="{{base_url()}}/img/content/campaign/scratch.jpg"><br><br>
+                                            <img width="70" height="70" title=" Art Blend: Digital /Drawing" alt="" src="{{base_url()}}/img/content/campaign/artblend.jpg">
+                                        </td>
+                                        <td class="w-10">July 29 – Aug 2</td>
+                                        <td>
+                                            <label><a href="{{path_for("scratchcoding")}}"><b>AM: Gaming and Animation - Scratch Coding 2, Intermediate </b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("artblend")}}"><b>PM:  Art Blend: Digital /Drawing</b></a></label>
+                                        </td>
+                                        <td class="w-10">8- 11 Yrs</td>
+                                        
+                                        <td class="w-10">535/week</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w-10">
+                                            <img width="70" height="70" title="Robotics" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"><br><br>
+                                            <img width="70" height="70" title="Sewing N Craft" alt="" src="{{base_url()}}/img/content/campaign/sewing_craft.jpg">
+                                        </td>
+                                        <td class="w-10">July 29 – Aug 2</td>
+                                        <td>
+                                            <label><a href="{{path_for("ev")}}"><b>AM: Robotics (Beginner  / intermediate) </b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("sewing")}}"><b>PM: Sewing N Craft </b></a></label>
+                                        </td>
+                                        <td class="w-10">10-14 Yrs</td>
+                                        
+                                        <td class="w-10">600 +20</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <!--<tr>
+                                        <td class="w-10">
+                                             <img width="70" height="70" title="Robotics" alt="" src="{{base_url()}}/img/content/campaign/fasion.jpg"><br><br>
+                                            <img width="70" height="70" title="Sewing N Craft" alt="" src="{{base_url()}}/img/content/campaign/sewing_craft.jpg">
+                                        
+                                        </td>
+                                        <td class="w-10">July 29 – Aug 2</td>
+                                        <td>
+                                            <label><a href="{{path_for("fasion")}}"><b>AM: Fashion Runway- Drawing Workshop</b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("sewing")}}"><b>PM:  Sewing N Craft  </b></a></label>
+                                        </td>
+                                        <td class="w-10">10-14 Yrs</td>
+                                        
+                                        <td class="w-10">520+20</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>-->
+                                    <tr>
+                                        <td class="w-10">
+                                            <img width="70" height="70" title="Robotics" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"><br><br>
+                                            <img width="70" height="70" title="PYTHON Coding " alt="" src="{{base_url()}}/img/content/campaign/python.jpg">
+                                        
+                                        </td>
+                                        <td class="w-10">July 29 – Aug 2</td>
+                                        <td>
+                                            <label><a href="{{path_for("ev")}}"><b>AM: ROBOTICS</b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("python")}}"><b>PM:  PYTHON Coding Intermediate Level  </b></a></label>
+                                        </td>
+                                        <td class="w-10">10-14 Yrs</td>
+                                       
+                                        <td class="w-10">675</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <!--<tr>
+                                        <td class="w-10">
+                                             <img width="70" height="70" title="Robotics" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"><br><br>
+                                            <img width="70" height="70" title="PYTHON Coding " alt="" src="{{base_url()}}/img/content/campaign/python.jpg">
+                                        
+                                        </td>
+                                        <td class="w-10">Aug 19 – 23</td>
+                                        <td>
+                                            <label><a href="{{path_for("ev")}}"><b>AM:  Robotics </b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("fun")}}"><b>PM:  Fun with Science – Motion and Mechanics</b></a></label>
+                                        </td>
+                                        <td class="w-10">8-11 Yrs</td>
+                                        
+                                        <td class="w-10">585+20</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w-10">
+                                             <img width="70" height="70" title="Robotics" alt="" src="{{base_url()}}/img/content/campaign/youtubing.jpg"><br><br>
+                                            <img width="70" height="70" title="PYTHON Coding " alt="" src="{{base_url()}}/img/content/campaign/java.jpg">
+                                        
+                                        </td>
+                                        <td class="w-10">Aug 19 – 23</td>
+                                        <td>
+                                            <label><a href="{{path_for("youtubing")}}"><b>AM: YouTubing: Video Production</b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("java2")}}"><b>PM: JAVA Programming 2</b></a></label>
+                                        </td>
+                                        <td class="w-10">9-14 Yrs</td>
+                                        
+                                        <td class="w-10">635</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                          
+                                    <tr>
+                                        <td class="w-10">
+                                             <img width="70" height="70" title="Robotics" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"><br><br>
+                                            <img width="70" height="70" title="PYTHON Coding " alt="" src="{{base_url()}}/img/content/campaign/python.jpg">
+                                        
+                                        </td>
+                                        <td class="w-10">Aug 26 – 30</td>
+                                        <td>
+                                            <label><a href="{{path_for("ev")}}"><b>AM: ROBOTICS 2</b></a></label><br>
+                                            <label class="margin-top60"><a href="{{path_for("python2")}}"><b>PM: PYTHON Coding (Intermediate/ Adv)</b></a></label>
+                                        </td>
+                                        <td class="w-10">9-14 Yrs</td>
+                                        
+                                        <td class="w-10">600</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w-10">
+                                             <img width="70" height="70" title="Robotics" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"><br><br>
+                                            <img width="70" height="70" title="SCRATCH Coding (Adv) " alt="" src="{{base_url()}}/img/content/campaign/scratch.jpg">
+                                        
+                                        </td>
+                                        <td class="w-10">Aug 26 – 30</td>
+                                        <td>
+                                            <label><a href="{{path_for("ev")}}"><b>AM: ROBOTICS 2</b></a></label><br>
+                                            <label class="margin-top60"><a href="{{"scratchcoding2"}}"><b>PM:  Gaming and Animation - Scratch Coding 3, Advance or Python Coding (inter/ Adv) </b></a></label>
+                                        </td>
+                                        <td class="w-10">9-13 Yrs</td>
+                                        
+                                        <td class="w-10">600</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="w-10">
+                                            <img width="70" height="70" title="Computer Foundation with Art1" alt="" src="{{base_url()}}/img/content/campaign/digitalart-girls.jpg"><br>
+                                            
+                                        </td>
+                                        <td class="w-10">Aug 26 – 30</td>
+                                        <td><label><a href="{{path_for("art1")}}"><b>AM: Computer Foundation with Art 2</b></a></label></td>
+                                        <td class="w-10">7-10 Yrs</td>
+                                        
+                                        <td class="w-10">230(half day)</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>!-->
+                                </tbody>
+                            </table>
+                            <!-- /shopping-cart-table -->
+                        </div>
+                        
+                    </div>
+                </div>
+                {% include 'camps/campspolicy.twig'%}
+            </div>
+        </div>
+</section>
+{% endblock %}

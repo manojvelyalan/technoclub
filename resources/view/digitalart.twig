@@ -1,0 +1,87 @@
+{% extends "templates/app.twig"%}
+
+ {% block content %}
+     <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Digital Art</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li>Digital Art</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Main Content-->
+
+<div class="content margin-top60 margin-bottom60">
+    <div class="container">
+        <div class="row">
+            <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <img src="{{base_url()}}/img/programs/digitalart-header.png" alt="digital art">
+            </div>
+        </div>
+    
+        <div class="row padding-top40">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 welcome-three">
+                <h2 class="text-center">Digital Art</h2>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-lg-offset-2 col-sm-offset-2 col-md-offset-2">
+                    <ul>
+                        <li><label class="bold_brown_text">Grades:</label> 2- 8 th Grades</li>
+                        <li><label class="bold_brown_text">Skill Level: </label>Beginner – Intermediate</li>
+                        <li><label class="bold_brown_text">Path: </label>Digital Art</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-md-6">
+                    <ul>
+                        <li><label class="bold_brown_text">Duration: </label> 8 – 16 weeks Session/semester</li>
+                        <li><label class="bold_brown_text">Prerequisite:</label>None</li>
+                        <li><label class="bold_brown_text">Tools/Language:</label>  MS Paint. PhotoFiltre, GIMP. Photoshop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row padding-top40">
+            <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <img src="{{base_url()}}/img/programs/steps-to-digtal-art.png" alt="step to digital art">
+               
+            </div>
+        </div>
+        <div class="row padding-top40">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 welcome-three">
+                <div class="col-lg-5 col-sm-5 col-md-5">
+                    <img src="{{base_url()}}/img/programs/digitalart.jpg" alt="digitalart">
+                    <p>
+                    <h3>DIGITAL ART</h3>
+                    <label class="bold_brown_text">DA 1</label><br>
+                    <label class="bold_brown_text">DA 2</label><br>
+                    <label class="bold_brown_text">DA 3</label><br>
+                    <label class="bold_brown_text">Grades: 2-8</label><br>
+                    <label class="bold_brown_text">Duration: Semester long</label><br>
+                    <label class="bold_brown_text">No Prior experience needed</label><br>
+                    <a href="{{path_for('studentregister')}}" class="btn btn-color text-capitalize">register</a>
+
+                    
+                    </p>
+                </div>
+                <div class="col-lg-7 col-sm-7 col-md-7">
+                   These 3 independent programs focus on graphic art. Students create digital art using various graphic tools and learn to do image manipulations which involves transforming or altering a photograph using various methods and techniques to get desired results
+                    <br><br>DA1:  MS Paint, 3D paint
+                    <br><br>DA2:  Learn Image manipulation techniques using Postfilter
+                    <br><br>DA3:  : Learn to use GIMP to create digital art 
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+  {% endblock %}

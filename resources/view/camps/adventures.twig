@@ -1,0 +1,42 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Engineering Adventures(6-9yrs) </h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Engineering Adventures(6-9yrs) </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/adventure.jpg" title="Engineering Adventures" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <small><b>Program conducted by Young Bricks4Kidz</b></small>
+                    <p>Making it move is the name of the game at this exciting camp! Kids will love to see their creations in motion. Each day is theme based where, campers will use fascinating and challenging LEGO® components to create dynamic theme-based objects and machines. As they enjoy the fun of building, campers will understand the basic working principles of many ingenious devices that are part of our everyday lives. Campers will learn how to redirect force to move objects at different speeds & in different directions. This camp is loads of Fun & Learning for budding engineers!!!</p>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-5">
+                            <h2 class="title">Gaming / Animation with SCRATCH</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-7">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Gaming / Animation with SCRATCH</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/scratch.jpg" title="Gaming / Animation with SCRATCH" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <p>Young aspiring coders engage into creating animated stories and interactive experiences while learning essential programming concepts with Scratch. With its creative drag and drop environment, using sprites and code blocks, students will build a foundation of computational thinking, logics for solving problems, designing projects, and communicating ideas. —an essential skill in this tech-driven world.</p>
+                    <h2>In this course, your student will:</h2>
+                    <ul>
+                        <li>Get familiar with Scratch environment and explore the what each code block does</li>
+                        <li>Design and animate sprites</li>
+                        <li>Experiment and explore to build creativity and confidence</li>
+                        <li>Create games and animation</li>
+                        
+                    </ul><br>
+                    <h2>Your student will take home:</h2>
+                    <p>Project files (camper need to bring their own USB Drive) </p>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

@@ -1,0 +1,404 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Tech and Art Summer Camps</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li>Half Day Summer Camp</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content margin-top60 margin-bottom60" id="summerCampaign">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <p>Techno Smart Kids offers project-based programs paving the path to STEAM education (Science, Technology, Engineering, Art and Math) for children, ages 6 – 14. Our goal is to encourage the qualities of inquisitiveness, self-reliance, and self-confidence in children. </p>
+                        <p>We offer <a href="{{path_for("halfdaysummercamp")}}">Half day</a> and <a href="{{path_for("fulldaysummercamp")}}">Full day</a>  camps. There are a variety of camps to choose from based on their interest and desire to learn new skill. Let you child gain these skills in a no stress, friendly and social setting with like-minded peers, making new friends , having fun and making great progress.</p>
+                        <p>Camp Location : <b>Pine Lake Community Club, 21333 SE 20th St, Sammamish, WA 98075</b></p>
+                    <a href="{{path_for("fulldaysummercamp")}}" class="btn btn-color pull-right hidden-xs">Full Day Camps</a>
+                    </div> 
+                    <div class="text-center visible-xs">
+                        <a href="{{path_for("fulldaysummercamp")}}" class="btn btn-color">Full Day Camps</a><br><br>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register Here</a><br>
+                        <span class="pl-4"><small>Scroll right for camp rates and registration.</small></span>
+                    </div>
+                    
+                </div>
+                <div class="row margin-top15">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="text-capitalize col-sm-12 col-md-12 summer_campaign_title">
+                        <span >Half day camps</span>
+                        </div>
+                        <div class="light_orange col-sm-12 col-md-12">
+                            <span class="summer_title_font">AM Camp 9:00 - 12.00 pm</span>
+                            <span class="pull-right summer_title_font"> Location : Pine Lake Community Club</span><br>
+                            <span class="pull-right"> Sammamish WA</span>
+                            <span class=" summer_title_font"> PM Camp 1:00 - 4:00 pm</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row"> 
+                           
+                    <div class="col-sm-12 col-md-12">
+<div class="table-responsive">
+    <table class="responsive-table table table-bordered table-striped" id="shopping-cart-table">
+                                <thead>
+                                    <tr>
+                                        <th></th> 
+                                        <th>Week</th>
+                                        <th></th>
+                                        <th>Camps</th>
+                                        <th>Grade</th>
+                                        <th>Camp Fee</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/scratch.jpg"></td>
+                                        <td class="w-10">July  15- 19</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('gaming')}}"><b>Gaming and Animation – Scratch coding Intermediate</b></a><br>
+                                        <label class="visible-xs">Camp Fee : $245</label>
+                                        </td>
+                                        <td class="w-10">8-11 Yrs</td>
+                                        
+                                        <td>245</td>
+                                        <td class="text-center last"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/cartoondrawing.jpg"></td>
+                                        <td class="w-10">July  15- 19</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for("cartoon")}}"><b>Drawing Art - Cartoon & Character drawing</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $195</label>
+                                        </td>
+                                        <td>8-11 yrs</td>
+                                         
+                                        <td>195</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"></td>
+                                        <td class="w-10">July  15- 19</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for("ev")}}"><b>Robotics EV3– Beginner Level</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $310</label>
+                                        </td>
+                                        <td>9-14 Yrs</td>
+                                         
+                                        <td>310</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/python.jpg"></td>
+                                        <td class="w-10">July  15- 19</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('python1')}}"><b>Python Coding 1 Beg - Inter</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $275</label>
+                                        </td>
+                                        <td>9-14 Yrs</td>
+                                         
+                                        <td>275</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                  
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/scratch.jpg"></td>
+                                        <td class="w-10">July 29- Aug 2</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('scratchcoding')}}"><b>Gaming and Animation - Scratch Coding 2, Beginner</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $245</label>
+                                        </td>
+                                        <td>8-11 Yrs</td>
+                                         
+                                        <td>245</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/artblend.jpg"></td>
+                                        <td class="w-10">July 29- Aug 2</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for('artblend')}}"><b>Art Blend: Digital /Drawing </b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $245</label>
+                                        </td>
+                                        <td>8-11 Yrs</td>
+                                         
+                                        <td>245</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"></td>
+                                        <td class="w-10">July 29- Aug 2</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('ev')}}"><b>Robotics EV3– Beginner Level</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $310</label>
+                                        </td>
+                                        <td>9-14 Yrs</td>
+                                         
+                                        <td>310</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"></td>
+                                        <td class="w-10">July 29- Aug 2</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('ev')}}"><b>Robotics EV3– Intermediate Level</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $310</label>
+                                        </td>
+                                        <td>10-14 Yrs</td>
+                                         
+                                        <td>310</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                   <!-- <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/fasion.jpg"></td>
+                                        <td class="w-10">July 29- Aug 2</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('fasion')}}"><b>Drawing Workshop – Fashion Runway By YR </b></a></td>
+                                        <td>10-14 Yrs</td>
+                                         
+                                        <td>230</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>-->
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/python.jpg"></td>
+                                        <td class="w-10">July 29- Aug 2</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for('python')}}"><b>Python coding - Intermediate  - Advance Level</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $275</label>
+                                        </td>
+                                        <td>10-14 Yrs</td>
+                                         
+                                        <td>275</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                   <!-- <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/sewing_craft.jpg"></td>
+                                        <td class="w-10">July 29- Aug 2</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for("sewing")}}"><b>Sewing N Craft</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $240 + 20 meterial</label>
+                                        </td>
+                                        <td>10-14 Yrs</td>
+                                         
+                                        <td>240+20 meterial</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>-->
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/digitalart-girls.jpg"></td>
+                                        <td class="w-10">July 29- Aug 2</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for("art1")}}"><b>Computer Foundation with Art 1</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $230</label>
+                                        </td>
+                                        <td>7-10 Yrs</td>
+                                         
+                                        <td>230</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/fasion.jpg"></td>
+                                        <td class="w-10">July 29- Aug 2</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for("fasion")}}"><b>Fashion Runway 215: Drawing Workshop</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $210</label>
+                                        </td>
+                                        <td>10-14 Yrs</td>
+                                         
+                                        <td>210</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/adventure.jpg"></td>
+                                        <td class="w-10">Aug 19- 23</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('adventures')}}"><b>Engineering Adventures by Bricks4kidz</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $240</label>
+                                        </td>
+                                        <td>6-9 Yrs</td>
+                                         
+                                        <td>240</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/scratch.jpg"></td>
+                                        <td class="w-10">Aug 19- 23</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('scratchcoding')}}"><b>Game and Animation with Scratch Beginner Level</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $245</label>
+                                        </td>
+                                        <td>7-11 Yrs</td>
+                                         
+                                        <td>245</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/scratch.jpg"></td>
+                                        <td class="w-10">Aug 19- 23</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('scratchcoding')}}"><b>Game and Animation with Scratch Intermediate Level</b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $245</label>
+                                        </td>
+                                        <td>8-11 Yrs</td>
+                                         
+                                        <td>245</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    
+                                   <!-- <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/python.jpg"></td>
+                                        <td class="w-10">Aug 19- 23</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for('fun')}}"><b>Fun with science- Motion and Mechanics</b></a></td>
+                                        <td>8-11 Yrs</td>
+                                         
+                                        <td>225+20</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>-->
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/youtubing.jpg"></td>
+                                        <td class="w-10">Aug 19- 23</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('youtubing')}}"><b>YouTubing: Video Production </b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $285</label>
+                                        </td>
+                                        <td>10-14 Yrs</td>
+                                         
+                                        <td>285</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/java.jpg"></td>
+                                        <td class="w-10">Aug 19- 23</td>
+                                        <td class="w-5">AM</td>
+                                        <td><a href="{{path_for('java')}}"><b>Java Programing - Beginner Level </b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $275</label>
+                                        </td>
+                                        <td>10-16 Yrs</td>
+                                         
+                                        <td>275</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"></td>
+                                        <td class="w-10">Aug 26- 30</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for('ev')}}"><b>Robotics Beginner Level </b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $310</label>
+                                        </td>
+                                        <td>9-14 Yrs</td>
+                                         
+                                        <td>310</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/robotics.jpg"></td>
+                                        <td class="w-10">Aug 26- 30</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for('ev')}}"><b>Robotics Intermediate Level </b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $310</label>
+                                        </td>
+                                        <td>10-14 Yrs</td>
+                                         
+                                        <td>310</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                   <!-- <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/scratch.jpg"></td>
+                                        <td class="w-10">Aug 26- 30</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for("scratchcoding2")}}"><b>Gaming and Animation - Scratch Coding 3, Advance</b></a></td>
+                                        <td>9-13 Yrs</td>
+                                         
+                                        <td>245</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>-->
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/digitalart-girls.jpg"></td>
+                                        <td class="w-10">Aug 26- 30</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for('art')}}"><b>Computer Foundation with Art   </b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $230</label>
+                                        </td>
+                                        <td>7-10 Yrs</td>
+                                         
+                                        <td>230</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color register-white">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/python.jpg"></td>
+                                        <td class="w-10">Aug 26- 30</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for("python2")}}"><b>Python coding 2 Inter /Advance </b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $275</label>
+                                        </td>
+                                        <td>10-14 Yrs</td>
+                                         
+                                        <td>275</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td ><img width="70" height="70" title="" alt="" src="{{base_url()}}/img/content/campaign/python.jpg"></td>
+                                        <td class="w-10">Aug 26- 30</td>
+                                        <td class="w-5">PM</td>
+                                        <td><a href="{{path_for("python2")}}"><b>Create with Roblox </b></a>
+                                        <br>
+                                        <label class="visible-xs">Camp Fee : $235</label>
+                                        </td>
+                                        <td>9-14 Yrs</td>
+                                         
+                                        <td>235</td>
+                                        <td class="text-center last"><div class="btn-group"><a href="https://docs.google.com/forms/d/e/1FAIpQLSe_Nt0HgXzBpYv5e5pjYU25s1Ut6QH2cbrilaIjQoxEoDTowA/viewform" class="btn btn-color">Register</a></div></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            <!-- /shopping-cart-table -->
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                {% include 'camps/campspolicy.twig'%}
+                                        
+            </div>
+        </div>
+</section>
+{% endblock %}

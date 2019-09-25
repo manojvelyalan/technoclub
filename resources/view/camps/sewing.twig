@@ -1,0 +1,46 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Sewing N Craft</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Sewing N Craft</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/sewing_craft.jpg" title="Sewing N Craft" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <p>In this camp, students will learn basic sewing skills, tool basics, sew seams, buttons, hem & construct simple and fun items like Cushion cover, sling bag, sun glass cover or Apron! They will also learn basic embroidery stitches and embellish their sewn project. In craft they will learn to make pot hanger or a soap Art.</p>
+                    <p>Supplies: <br>
+Basic sewing supplies will be provided. Material for the project could be either bought by you of your choice or could be purchased from us. It will be $20 – $25 additional to the camp fee, depending on the project. (Project details and supply list will be provided on registration, if you choose to buy your own),
+</p>
+                    <h2>Your student will take home:</h2>
+                    <p>Project files (required to bring their own USB drive) </p>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

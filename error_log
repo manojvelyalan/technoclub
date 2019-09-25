@@ -1,0 +1,47 @@
+[26-Aug-2019 10:58:34 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:03:16 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:05:31 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/ussgg80r2l8w/public_html/technosmart/Controllers/HomeController.php on line 175
+[26-Aug-2019 11:05:33 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:32:15 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/ussgg80r2l8w/public_html/technosmart/Controllers/HomeController.php on line 175
+[26-Aug-2019 11:32:15 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:33:15 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:33:16 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:33:18 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:33:18 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:33:18 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:33:18 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:43:15 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:43:17 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:43:17 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 11:43:17 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 12:42:04 UTC] PHP Notice:  Undefined variable: date_ in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 41
+[26-Aug-2019 12:42:33 UTC] PHP Notice:  Undefined offset: 1 in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 134
+[26-Aug-2019 12:44:40 UTC] PHP Notice:  Undefined variable: paymentCreate in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 93
+[26-Aug-2019 12:45:37 UTC] PHP Notice:  Undefined variable: date_ in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 41
+[26-Aug-2019 12:47:31 UTC] PHP Notice:  Undefined variable: date_ in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 41
+[26-Aug-2019 12:48:00 UTC] PHP Notice:  Undefined variable: date_ in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 41
+[26-Aug-2019 12:49:09 UTC] PHP Notice:  Undefined variable: date_ in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 41
+[26-Aug-2019 12:59:23 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 13:12:52 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/ussgg80r2l8w/public_html/technosmart/Controllers/HomeController.php on line 175
+[26-Aug-2019 13:12:53 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 13:24:36 UTC] PHP Deprecated:  Non-static method Technosmart\Models\Payment::paymentCreate() should not be called statically in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 88
+[26-Aug-2019 13:26:02 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 13:26:29 UTC] PHP Deprecated:  Non-static method Technosmart\Models\Payment::paymentCreate() should not be called statically in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 88
+[26-Aug-2019 13:29:30 UTC] PHP Notice:  Undefined variable: registerDetails in /home/ussgg80r2l8w/public_html/technosmart/Controllers/Admin/RequestController.php on line 22
+[26-Aug-2019 13:29:30 UTC] PHP Notice:  Trying to get property 'programs' of non-object in /home/ussgg80r2l8w/public_html/technosmart/Controllers/Admin/RequestController.php on line 22
+[26-Aug-2019 13:56:39 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 14:01:35 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 14:03:44 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 14:08:52 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 15:06:03 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 16:01:56 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 16:27:46 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 16:32:01 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 16:34:57 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 16:35:00 UTC] PHP Deprecated:  Non-static method Technosmart\Models\Payment::paymentCreate() should not be called statically in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 88
+[26-Aug-2019 16:45:35 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 16:48:12 UTC] PHP Deprecated:  Non-static method Technosmart\Models\Payment::paymentCreate() should not be called statically in /home/ussgg80r2l8w/public_html/technosmart/Controllers/PaymentController.php on line 88
+[26-Aug-2019 17:52:41 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 17:55:01 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 18:00:49 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8
+[26-Aug-2019 18:04:04 UTC] PHP Notice:  Undefined index: old in /home/ussgg80r2l8w/public_html/technosmart/Middleware/OldDataMiddleware.php on line 8

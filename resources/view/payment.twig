@@ -1,0 +1,178 @@
+{% extends "templates/app.twig"%}
+{% set totalDiscountFee =  0 %}
+ {% block content %}
+ <!-- Main Section -->
+    <section id="main">
+        <!-- Title, Breadcrumb -->
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Payment</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li>Payment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Title, Breadcrumb -->
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="row">
+                 <div class="col-sm-12 col-md-12">
+                        <div class="table-box mb-5">
+                        <h2>Request Details</h2>
+                <table class="responsive-table table table-bordered table-striped pb-5" id="userdetails-table">
+
+                                <tbody>
+                                 <tr>
+                                        <th>Full Name</th>
+                                        <td>{{(details.first_name ~ " "~ details.last_name) | title }}</td>
+                                        <th>Grade</th>
+                                        <td>{{ details.grade }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>School Name</th>
+                                        <td>{{ details.school_name }}</td>
+                                        <th>Age</th>
+                                        <td>{{ details.age }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>{{ details.email }}</td>
+                                        <th>Contact Number</th>
+                                        <td>{{ details.phone }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Parent Name</th>
+                                        <td>{{ details.parent_name }}</td>
+                                        <th>Emergency Name</th>
+                                        <td>{{ details.emergency_name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Emergency Name</th>
+                                        <td>{{ details.emergency_name }}</td>
+                                        <th>Emergency Contact Number</th>
+                                        <td>{{ details.emergency_number }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pick Up</th>
+                                        <td>{{details.pickup().first().title}}</td>
+                                         <th>Usb</th>
+                                        <td>{{(details.is_usb)?"I would like Techno Smart Kids to provide 1 USB flash drive of 2GB for $6.00":"I will bring my own"}}</td>
+                                    </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <div class="table-box">
+                        <h2>Programs / Session Details</h2>
+                            <!-- shopping-cart-table -->
+                            <table class="shopping-cart-table responsive-table table table-bordered table-striped" id="shopping-cart-table">
+                                <thead>
+                                    <tr>
+
+                                        <th class="td-name">Programs / Session Name</th>
+                                        <th class="td-price">Unit Price</th>
+                                        <th class="td-total">Subtotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    {% for program in programs %}
+                                    {% set discountDetails = details.getDiscount(program.id) %}
+                                    <tr>
+                                       <td class="td-name">{{program.programs}}</td>
+                                        <td class="td-price"><div class="price">
+                                            {% if discountDetails != false %}
+                                                <strike>${{program.fee |number_format(2, '.', ',') }}</strike>
+                                                {{ discountDetails.amount |number_format(2, '.', ',') }}
+                                            {% else %}
+                                                ${{program.fee |number_format(2, '.', ',') }}
+                                            {% endif %}
+                                        </div>
+ </td>
+                                        <td class="td-total">${{(program.fee - discountDetails.amount) | number_format(2,'.','')}}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            <!-- /shopping-cart-table -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5" id="car-bottom">
+
+                    <div class="col-sm-6 col-md-6">
+                        <div class="car-bottom-box bg">
+                            <h5>Discount Codes</h5>
+                            <p>Enter your coupon code if you have one.</p>
+                            <input type="text" placeholder="Please select region, state or province" class="form-control">
+                            <button class="btn btn-color">Apply Coupon</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <div class="car-bottom-box bg total">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <h3>Unit Price Total : &nbsp;&nbsp</h3>
+                                        </td>
+                                        <td>
+                                            <h3>{{ details.total_amount | number_format(2,'.','') }}</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3>Discount : </h3>
+                                        </td>
+                                        <td>
+                                            <h3>{{details.discount_amount | number_format(2,'.','') }}</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3>USB Amount : </h3>
+                                        </td>
+                                        <td>
+                                            <h3>{{(details.is_usb)? "6.00" : "0.00" }}</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3>Grand Total :  </h3>
+                                        </td>
+                                        <td>
+                                            <h3>{{details.grand_total | number_format(2,'.','') }}</h3>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <form method="post" action="{{path_for('paypalrequest')}}">
+
+                                <input type="hidden" name="registerid" value="{{details.id}}" / >
+                                <input type="submit" name="submit" value="Submit Payment" class="btn btn-success"/>
+                                {{csrf.feilds | raw }}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Main Content -->
+    </section>
+<!-- /Main Section -->
+ {% endblock %}

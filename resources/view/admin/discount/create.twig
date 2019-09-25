@@ -1,0 +1,103 @@
+{% extends "admin/templates/app.twig"%}
+{% block content %}
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{{path_for('dashboard')}}">Dashboard</a>
+      </li>
+        <li class="breadcrumb-item">
+        <a href="{{path_for('listalldiscount')}}">List All Discount</a>
+      </li>
+      <li class="breadcrumb-item active">Create Discount</li>
+    </ol>
+    <!-- Page Content -->
+    <h1>Create Discount</h1>
+    <hr>
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header"><i class="fas fa-table"></i> Discount</div>
+        <div class="card-body">
+            <form method="post" action="{{path_for('adddiscount')}}">
+                <div class="form-group">
+                  <div class="form-label-group">
+                        <select name="program" id="program" class="form-control {{errors.program}} ? ' border-danger':''}}">
+                          <option value="">Select Program</option>
+                          {%  for program in programs %}
+                              <option value="{{program.id}}" {{(program.id == old.program)?"selected":""}}>{{program.programs}}</option>
+                          {% endfor %}
+                        </select>
+                        <span class="text-danger align-middle">
+                                    {% if errors.program %}
+                                    {{errors.program | first}}
+                                    {% endif %}
+                        </span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-label-group">
+                        <input type="text" id="title" class="form-control {{errors.title ? ' border-danger':''}}" placeholder="Title" name="title" autofocus="autofocus"   value="{{old.title}}">
+                            <label for="title">Title</label>
+                            <span class="text-danger align-middle">
+                                      {% if errors.title %}
+                                      {{errors.title | first}}
+                                      {% endif %}
+                            </span>
+                    </div>
+                </div>
+
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="date" id="startDate" class="form-control {{errors.startDate ? ' border-danger':''}}" placeholder="Start Date" name="startDate" autofocus="autofocus"   value="{{old.startDate}}">
+                      <label for="startDate">Start Date</label>
+                      <span class="text-danger align-middle">
+                                      {% if errors.startDate %}
+                                      {{errors.startDate | first}}
+                                      {% endif %}
+                        </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="date" id="endDate" class="form-control {{errors.endDate ? ' border-danger':''}}" placeholder="End Date" name="endDate" autofocus="autofocus"   value="{{old.endDate}}">
+                      <label for="endDate">End Date</label>
+                      <span class="text-danger align-middle">
+                                      {% if errors.endDate %}
+                                      {{errors.endDate | first}}
+                                      {% endif %}
+                        </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="text" id="amount" class="form-control {{errors.amount ? ' border-danger':''}}" placeholder="Amount" name="amount" autofocus="autofocus"   value="{{old.amount}}">
+                      <label for="amount">Amount</label>
+                      <span class="text-danger align-middle">
+                                {% if errors.amount %}
+                                {{errors.amount | first}}
+                                {% endif %}
+                    </span>
+                </div>
+              </div>
+              <button type="submit" name="register" class="btn btn-danger btn-block" >Create</button>
+                {{csrf.feilds | raw}}
+            </form>
+        </div>
+          
+    </div>
+
+</div>
+{% endblock %}
+ {% block javascript %}
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="{{base_url()}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{base_url()}}/admin/js/sb-admin.min.js"></script>
+ {% endblock %}

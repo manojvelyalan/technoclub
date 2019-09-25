@@ -1,0 +1,698 @@
+{% extends "templates/app.twig"%}
+
+ {% block content %}
+   <!-- Main Section -->
+    <section id="main">
+        <!-- Slider -->
+        <div class="fullwidthbanner-container tp-banner-container">
+            <div class="fullwidthbanner rslider tp-banner">
+                <ul>
+                    <!-- THE FIRST SLIDE -->
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-thumb="homeslider_thumb2.jpg" data-delay="10000"  data-saveperformance="on">
+                        <!-- MAIN IMAGE -->
+                        <img src="{{base_url()}}/img/dummy.png"  alt="laptopmockup_sliderdy" data-lazyload="{{base_url()}}/img/slider/slider-bg-1.jpg" data-bgposition="right top" data-kenburns="on" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption customin fadeout rs-parallaxlevel-10"
+                            data-x="783"
+                            data-y="146"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="2700"
+                            data-easing="Power3.easeInOut"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 2;"><img src="{{base_url()}}/img/dummy.png" alt="" data-lazyload="{{base_url()}}/img/redbg_big.png">
+                        </div>
+                        <!-- LAYER NR. 2 -->
+                         <div class="tp-caption light_heavy_30 customin fadeout tp-resizeme rs-parallaxlevel-10"
+                                    data-x="797"
+                                    data-y="154"
+                                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-speed="300"
+                                    data-start="2850"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">TECH Learning
+                                </div>
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption black_heavy_50 skewfromleftshort fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="600"
+                            data-y="83"
+                            data-speed="500"
+                            data-start="2400"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="chars"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Nurturing Love Towards
+                        </div>
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption black_bold_20 skewfromrightshort fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="700"
+                            data-y="232"
+                            data-speed="500"
+                            data-start="3200"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="chars"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">through a creative and engaging curriculum
+                        </div>
+                        <!-- LAYER NR. 5 -->
+                        <div class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10 "
+                            data-x="700"
+                            data-y="300"
+                            data-speed="300"
+                            data-start="4000"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">BUILDING STRONG FOUNDATION
+                        </div>
+                        <!-- LAYER NR. 6 -->
+                        <div class="tp-caption orangebox30 customin fadeout tp-resizeme rs-parallaxlevel-10 color"
+                            data-x="669"
+                            data-y="300"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="4000"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
+                        </div>
+                        <!-- LAYER NR. 7 -->
+                        <div class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
+                            data-x="675"
+                            data-y="306"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="4200"
+                            data-easing="Power3.easeInOut"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 8;"><img src="{{base_url()}}/img/dummy.png" alt="" data-ww="17" data-hh="17" data-lazyload="{{base_url()}}/img/check.png">
+                        </div>
+                        <!-- LAYER NR. 8 -->
+                        <div class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="700"
+                            data-y="340"
+                            data-speed="300"
+                            data-start="4500"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">PROMOTING CRITICAL THINKING
+                        </div>
+                        <!-- LAYER NR. 9 -->
+                        <div class="tp-caption orangebox30 customin fadeout tp-resizeme rs-parallaxlevel-10 "
+                            data-x="669"
+                            data-y="340"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="4500"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
+                        </div>
+                        <!-- LAYER NR. 10 -->
+                        <div class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
+                            data-x="675"
+                            data-y="347"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="4700"
+                            data-easing="Power3.easeInOut"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 11;"><img src="{{base_url()}}/img/dummy.png" alt="" data-ww="17" data-hh="17" data-lazyload="{{base_url()}}/img/check.png">
+                        </div>
+                        <!-- LAYER NR. 11 -->
+                        <div class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="700"
+                            data-y="380"
+                            data-speed="300"
+                            data-start="5000"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;">EMPOWERING CREATIVITY
+                        </div>
+                        <!-- LAYER NR. 12 -->
+                        <div class="tp-caption orangebox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="669"
+                            data-y="380"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="5000"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 13; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
+                        </div>
+                        <!-- LAYER NR. 13 -->
+                        <div class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
+                            data-x="675"
+                            data-y="386"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="5200"
+                            data-easing="Power3.easeInOut"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 14;"><img src="{{base_url()}}/img/dummy.png" alt="" data-ww="17" data-hh="17" data-lazyload="{{base_url()}}/img/check.png">
+                        </div>
+                    </li>
+                    <!-- /THE FIRST SLIDE -->
+                    <!-- THE RESPONSIVE SLIDE -->
+                    <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
+
+                        <!-- MAIN IMAGE -->
+                        <img src="img/dummy.png"  alt="laptopmockup_sliderdy" data-lazyload="{{base_url()}}/img/slider/slider-bg-2.jpg" data-bgposition="right top" data-kenburns="on" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
+                        <!-- LAYERS -->
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption customin fadeout rs-parallaxlevel-10"
+                            data-x="783"
+                            data-y="146"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="2700"
+                            data-easing="Power3.easeInOut"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 2;"><img src="{{base_url()}}/img/dummy.png" alt="" data-lazyload="{{base_url()}}/img/redbg_big.png">
+                        </div>
+                        <!-- LAYER NR. 2 -->
+                         <div class="tp-caption light_heavy_30 customin fadeout tp-resizeme rs-parallaxlevel-10"
+                                    data-x="797"
+                                    data-y="154"
+                                    data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                    data-speed="300"
+                                    data-start="2850"
+                                    data-easing="Power3.easeInOut"
+                                    data-splitin="none"
+                                    data-splitout="none"
+                                    data-elementdelay="0.1"
+                                    data-endelementdelay="0.1"
+                                    data-endspeed="300"
+                                    style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">TECH Learning
+                                </div>
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption black_heavy_50 skewfromleftshort fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="600"
+                            data-y="83"
+                            data-speed="500"
+                            data-start="2400"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="chars"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Nurturing Love Towards
+                        </div>
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption black_bold_20 skewfromrightshort fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="700"
+                            data-y="232"
+                            data-speed="500"
+                            data-start="3200"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="chars"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">through a creative and engaging curriculum
+                        </div>
+                        <!-- LAYER NR. 5 -->
+                        <div class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10 "
+                            data-x="700"
+                            data-y="300"
+                            data-speed="300"
+                            data-start="4000"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">BUILDING STRONG FOUNDATION
+                        </div>
+                        <!-- LAYER NR. 6 -->
+                        <div class="tp-caption orangebox30 customin fadeout tp-resizeme rs-parallaxlevel-10 color"
+                            data-x="669"
+                            data-y="300"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="4000"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
+                        </div>
+                        <!-- LAYER NR. 7 -->
+                        <div class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
+                            data-x="675"
+                            data-y="306"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="4200"
+                            data-easing="Power3.easeInOut"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 8;"><img src="{{base_url()}}/img/dummy.png" alt="" data-ww="17" data-hh="17" data-lazyload="{{base_url()}}/img/check.png">
+                        </div>
+                        <!-- LAYER NR. 8 -->
+                        <div class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="700"
+                            data-y="340"
+                            data-speed="300"
+                            data-start="4500"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">PROMOTING CRITICAL THINKING
+                        </div>
+                        <!-- LAYER NR. 9 -->
+                        <div class="tp-caption orangebox30 customin fadeout tp-resizeme rs-parallaxlevel-10 "
+                            data-x="669"
+                            data-y="340"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="4500"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
+                        </div>
+                        <!-- LAYER NR. 10 -->
+                        <div class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
+                            data-x="675"
+                            data-y="347"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="4700"
+                            data-easing="Power3.easeInOut"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 11;"><img src="{{base_url()}}/img/dummy.png" alt="" data-ww="17" data-hh="17" data-lazyload="{{base_url()}}/img/check.png">
+                        </div>
+                        <!-- LAYER NR. 11 -->
+                        <div class="tp-caption black_bold_bg_20 sfr fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="700"
+                            data-y="380"
+                            data-speed="300"
+                            data-start="5000"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;">EMPOWERING CREATIVITY
+                        </div>
+                        <!-- LAYER NR. 12 -->
+                        <div class="tp-caption orangebox30 customin fadeout tp-resizeme rs-parallaxlevel-10"
+                            data-x="669"
+                            data-y="380"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="5000"
+                            data-easing="Power3.easeInOut"
+                            data-splitin="none"
+                            data-splitout="none"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 13; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
+                        </div>
+                        <!-- LAYER NR. 13 -->
+                        <div class="tp-caption arrowicon customin fadeout rs-parallaxlevel-10"
+                            data-x="675"
+                            data-y="386"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="300"
+                            data-start="5200"
+                            data-easing="Power3.easeInOut"
+                            data-elementdelay="0.1"
+                            data-endelementdelay="0.1"
+                            data-endspeed="300"
+                            style="z-index: 14;"><img src="{{base_url()}}/img/dummy.png" alt="" data-ww="17" data-hh="17" data-lazyload="{{base_url()}}/img/check.png">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Slider -->
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="container">
+                <div class="row margin-bottom40">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id='welcomeText'>
+
+                        <p  class="welcome-font">
+                           <span class="black_bold_30">Techno Smart Kids </span> conducts technology enrichment programs, paving the way to STEM education by providing a fun way for children to learn and grow their technology skills and get ready for the challenges of the digital world.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-4 wow fadeIn">
+
+                                <div class="pricing_plan bottom-pad-small wow fadeInUp">
+                                    <h3>Before / After School Class<small>Offered at the school premises</small></h3>
+                                    <div class="the_price text-justify the_price_two_box">
+                                        <small>
+                                          In Techno Club, S.T.E.M enrichment classes are offered either before or after school in various public as well private elementary and middle school in Sammamish, Issaquah, Bellevue and Renton area. Check the classes offered in your school or Contact us to start a Techno Club in your school.
+
+                                        </small>
+                                    </div>
+
+                                    <div>
+                                        <div class="col-lg-12 ">
+                                            <ul class="text-left ">
+                                                <li><b>Computer Foundation</b></span></li>
+                                                <li><b>Scratch Coding</b></li>
+                                                 <li><b>Python Coding</b></li>
+                                                 <li><b>Java Coding</b></li>
+                                                <li><b>Robotics</b></li>
+                                                <li><b>Roblox</b></li>
+                                                <li><b>Digital Art</b></li>
+                                                <li><b>YouTubing – Content Creation</b></li>
+                                                <li><b>Photography and Image Editing</b></li>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <a href="{{path_for('technoclub')}}" class="btn btn-color">Find Program @ Your School</a>
+                                </div>
+
+
+                    </div>
+
+                    <div class="col-lg-4 wow fadeIn ">
+
+                            <div class="pricing_plan bottom-pad-small wow fadeInUp">
+                                <h3>Saturday & Evening Classes</h3>
+                                <div class="the_price text-justify the_price_two_box"><small>
+                                  We offer S.T.E.M enrichment classes on Saturdays and weekday evenings (Wednesday and Friday) at our Sammamish (PLCC)  location. These classes cater multi skill level kids. Small class size. This is a great option if unable to attend afterschool programs or want more comprehensive learning.
+
+                                </small></div>
+                                <div>
+                                        <div class="col-lg-12 ">
+                                            <ul class="text-left ">
+                                                <li><b>Computer Foundation</b></span></li>
+                                                <li><b>Scratch Coding</b></li>
+                                                 <li><b>Python Coding</b></li>
+                                                 <li><b>Java Coding</b></li>
+                                                <li><b>Robotics</b></li>
+                                                <li><b>Roblox</b></li>
+                                                <li><b>Digital Art</b></li>
+                                                <li><b>YouTubing – Content Creation</b></li>
+                                                <li><b>Photography and Image Editing</b></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                <a href="{{path_for('technoclub')}}" class="btn btn-color"> Find Program</a>
+                            </div>
+
+                    </div>
+                    <div class="col-lg-4 wow fadeIn">
+
+                                <div class="pricing_plan bottom-pad-small wow fadeInUp">
+                                    <h3>Camps During School Breaks
+                                        <small>Offered at TechnoSmartKids Center in Sammamish</small></h3>
+                                    <div class="the_price text-justify the_price_two_box">
+                                        <small>
+                                          We offer Mid-winter, Spring and Summer camps (half / full day)  Our camps and workshop’s curriculum incorporate STEAM learning (science, technology, engineering, arts and mathematics) into exciting and fun experiences for your child every day! We introduce the most relevant, in-demand curriculum to set students on their long-term skill development pathway.
+
+                                          </small>
+                                    </div>
+
+                                    <div>
+                                        <div class="col-lg-12 ">
+                                            <ul class="text-left ">
+                                                <li><b>Computer Foundation</b></span></li>
+                                                <li><b>Coding - Scratch/Python/Java</b></li>
+                                                <li><b>Robotics</b></li>
+                                                <li><b>Roblox</b></li>
+                                                <li><b>Digital Art</b></li>
+                                                <li><b>Science and Engineering</b></li>
+                                                <li><b>Drawing Art</b></li>
+                                                <li><b>Sewing and Craft</b></li>
+                                                <li><b>YouTubing – Content Creation</b></li>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <a href="{{path_for('halfdaysummercamp')}}" class="btn btn-color">Find a Camp</a>
+                                </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Main Content -->
+
+        <!-- Product Content -->
+        <div class="product-lead bottom-pad margin-top100">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-12 col-xs-12 text-center wow fadeInLeft ">
+                            <img class="app-img" src="{{base_url()}}/img/content/whyus.png" alt="why us">
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12 wow fadeInRight">
+                            <div class="app-service padding-bottom50">
+                                <h2 class="light">Why US</h2>
+                                <ul class="whyusfont">
+                                    <li>Structured curriculum to build good foundation</li>
+                                    <li>Progressively develops skills from one program to next to broaden their computer skills </li>
+                                    <li>Low student to teacher ration for better attention.</li>
+                                    <li>Fun filled hand on exercises to master learned skill.</li>
+                                    <li>Taught by instructors with years of experience in computers and teaching</li>
+                                    <li>All the teachers are highly invested in your child’s learning and success</li>
+                                    <li>Support kids to grow in their confidence of creating with technology</li>
+                                    <li>Individual laptops for each child unless it’s a group project</li>
+                                </ul>
+                                <div class="divider"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Product Content -->
+
+        <!-- Portfolio Work -->
+        <div class="portfolio bottom-pad margin-top100">
+            <div class="container">
+                <div class="row">
+                    <div class="portfolio-content">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="portfolio-title text-center">
+                                <h2 class="wow fadeIn">Programs We Offer</h2>
+                                <h4 class="wow fadeInRight ">
+                                   We offer a wide range of programs and levels catering to different interest and skill level of kids. <br/> Each path has structured course material to build good foundation and then expand on it to make them <b>Tech Smart</b>.
+
+                               </h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInUp margin50">
+                            <div >
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <img class="card-img-top" src="{{base_url()}}/img/content/foundation.png" alt="Computer Foundation">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Computer Foundation</h3>
+                                            <p class="card-text">This program focuses on building a good foundation to make kids comfortable in using various basic computer applications and tools and paves their interest towards STEM education.</p>
+                                            <!--<a href="#" class="btn btn-color text-capitalize col-lg-12"> Find This Class</a>
+                                            <span class="pull-right">Grades: 1 - 3 <i class="fa fa-child"></i></span>
+                                            <span ><i class="fa fa-map-marker">Sammamish, Issaquah, Bellevue, Renton</i></span>-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                         <img class="card-img-top" src="{{base_url()}}/img/content/coding.png" alt="Computer Coding">
+                                         <div class="card-body">
+                                            <h3 class="card-title">Coding</h3>
+                                            <p class="card-text">Coding is a great skill to have in this technology-oriented world. When kids learn to code, they also learn important strategies and logics for solving problems, designing projects, and communicating ideas. </p>
+                                            <!--<a href="#" class="btn btn-color text-capitalize col-lg-12"> Find This Class</a>
+                                            <span class="pull-right">Grades: 2 - 8 <i class="fa fa-child"></i></span>
+                                            <span ><i class="fa fa-map-marker">Sammamish, Issaquah, Bellevue, Renton</i></span>-->
+                                        </div>
+                                     </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                         <img class="card-img-top" src="{{base_url()}}/img/content/robotics.png" alt="Computer Robotics">
+                                         <div class="card-body">
+                                            <h3 class="card-title">Robotics</h3>
+                                            <p class="card-text">Robotics is one of the most engaging ways of introducing technology in young kids’ education. By learning to build, program and control a physical robot student learn about science, engineering and math.</p>
+                                            <!--<a href="#" class="btn btn-color text-capitalize col-lg-12">Find This Class</a>
+                                            <span class="pull-right">Grades: 3 - 8 <i class="fa fa-child"></i></span>
+                                            <span ><i class="fa fa-map-marker">Sammamish, Issaquah, Bellevue, Renton</i></span>-->
+                                        </div>
+                                     </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                         <img class="card-img-top" src="{{base_url()}}/img/content/digitalart.png" alt="Digital Art">
+                                         <div class="card-body">
+                                            <h3 class="card-title">Digital Art</h3>
+                                            <p class="card-text">These classes are apt for kids who love art. Provide them a new medium to express their creativity and, in the process, make them tech savy. Students will learn to create and manipulate graphic</p>
+                                            <!--<a href="#" class="btn btn-color text-capitalize col-lg-12">Find This Class</a>
+                                            <span class="pull-right">Grades: 2 - 5 <i class="fa fa-child"></i></span>
+                                            <span ><i class="fa fa-map-marker">Sammamish, Issaquah, Bellevue, Renton</i></span>-->
+                                        </div>
+                                     </div>
+                                </div>
+                                <a href="{{path_for('technoclub')}}" class="btn btn-color col-md-offset-4 margin-top25">Find The Right One For Your Child</a>
+
+                            </div>
+                            <!-- /grid -->
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Portfolio work -->
+        <!-- Slogan -->
+        <div class="slogan margin-top100 bottom-pad-small">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="slogan-content">
+                            <div class="col-lg-10 col-md-10 wow fadeInLeft">
+                                <h2 class="slogan-title">Pave the Way to STEM Education!</h2>
+                            </div>
+                            <div class="col-lg-2 col-md-2 wow fadeInRight">
+                                <div class="get-started wow fadeIn">
+                                    <a href="{{path_for('studentregister')}}" class="btn-special btn-grey pull-right">Register</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Slogan -->
+        <!-- Services -->
+        <div id="services" class="margin-top80">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <div class="padding-top40 text-center">
+                                <h2 class="light wow fadeIn">Have question about our classes or what we do?</h2>
+                                <h4 class="light wow fadeInRight">
+                                    We'd like to hear grom you ..
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                            <div class="padding-top40 text-center">
+                                <form action="#"  id="siginin" method="post" class="mb-2">
+                                                <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <input type="text" value="" class="form-control" placeholder="Name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <input type="text" value="" class="form-control" placeholder="Email">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <div class="row">
+                                                    <div class="form-group">
+                                                        <div class="col-md-12">
+                                                            <textarea class="form-control" placeholder="Message"></textarea>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-md-12">
+                                                        <button   type="button" class="btn white_bold_bg_20 pull-right" data-loading-text="Loading...">Send</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /Services --> <br><br>
+
+    </section>
+    <!-- /Main Section -->
+
+
+    <!-- Scroll To Top -->
+    <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+</div>
+ {% endblock %}

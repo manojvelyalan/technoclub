@@ -1,0 +1,95 @@
+{% extends "templates/app.twig"%}
+
+ {% block content %}
+     <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Foundation</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li>Foundation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Main Content-->
+
+<div class="content margin-top60 margin-bottom60">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <img src="{{base_url()}}/img/programs/foundation-header.png" alt="foundation">
+            </div>
+        </div>
+    
+        <div class="row padding-top40">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 welcome-three">
+                <h2 class="text-center">Foundation and Beyond</h2>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-lg-offset-2 col-sm-offset-2 col-md-offset-2">
+                    <ul>
+                        <li><label class="bold_brown_text">Grades:</label> 1- 3rd Grades</li>
+                        <li><label class="bold_brown_text">Skill Level: </label>Beginner </li>
+                        <li><label class="bold_brown_text">Path: </label>Foundation Series</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-md-6">
+                    <ul>
+                        <li><label class="bold_brown_text">Duration: </label> 8 – 16 weeks Session/semester</li>
+                        <li><label class="bold_brown_text">Prerequisite: Session 1: </label> None  , <label class="bold_brown_text">Session 2:</label> Basic computer Skills</li>
+                        <li><label class="bold_brown_text">Tools/Language:</label>  MS Paint. Word, PowerPoint, Scratch</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row padding-top40">
+            <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <img src="{{base_url()}}/img/programs/steps-to-foundation.png" alt="step to  foundation">
+               
+            </div>
+        </div>
+        <div class="row padding-top40">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 welcome-three">
+                <div class="col-lg-5 col-sm-5 col-md-5">
+                    <img src="{{base_url()}}/img/programs/foundation.jpg" alt="foundation">
+                    <p>
+                    <h3>FOUNDATION</h3>
+                    <label class="bold_brown_text">COMP 101</label><br>
+                    <label class="bold_brown_text">COMP 102</label><br>
+                    <label class="bold_brown_text">Grades: 1-3</label><br>
+                    <label class="bold_brown_text">Duration: Semester long</label><br>
+                    <label class="bold_brown_text">No Prior experience needed</label><br>
+                    <a href="{{path_for('studentregister')}}" class="btn btn-color text-capitalize">register</a>
+
+                    
+                    </p>
+                </div>
+                <div class="col-lg-7 col-sm-7 col-md-7">
+                   These 2 independent semesters foundation building program focus on introducing various programs and essential skill building activities for early tech kid.  They will learn basic and some advanced skills in  
+                    <br>COMP101
+                   <ul>
+                       <li>Graphic arts and Animation</li>
+                       <li>Word processing </li>
+                       <li>Multimedia slide presentations</li>
+                   </ul>
+                   <br>COMP101
+                   <ul>
+                       <li>Intro to coding with scratch</li>
+                       
+                   </ul>
+                   <p>This program focuses on building a good foundation for them to be comfortable using various programs and tools and eases them to take up the technology challenges and projects for higher grades by making them more tech savvy.  Also, it is a good foundation class for taking up other Techno Smart Kids programs offered for higher grade kids in the school. All learning is based on hands on exercise and fun projects in no stress environment.  They will also get lot of opportunity to get proficient in basic skills like using the mouse, right click, selecting, typing, formatting and word processing skills along with developing good computer habits of organizing and saving their work. These will help them in develop the speed and accuracy.   </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+  {% endblock %}

@@ -1,0 +1,163 @@
+{% extends "admin/templates/app.twig"%}
+{% block content %}
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{{path_for('dashboard')}}">Dashboard</a>
+      </li>
+        <li class="breadcrumb-item">
+        <a href="{{path_for('listallprograms')}}">List All Programs</a>
+      </li>
+      <li class="breadcrumb-item active">Update Program</li>
+    </ol>
+    <!-- Page Content -->
+    <h1>Update Program</h1>
+    <hr>
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header"><i class="fas fa-table"></i> Program</div>
+        <div class="card-body">
+            <form method="post" action="{{path_for('editprogram')}}">
+                 <div class="form-group">
+                    <div class="form-label-group">
+                      <input type="text" id="program" class="form-control {{errors.program ? ' border-danger':''}}" placeholder="Program Name" name="program" autofocus="autofocus"   value="{{programDetails.programs}}">
+                          <label for="program">Program Name</label>
+                          <span class="text-danger align-middle">
+                                    {% if errors.program %}
+                                    {{errors.program | first}}
+                                    {% endif %}
+                        </span>
+                    </div>
+                </div>
+                 <div class="form-group">
+                  <div class="form-label-group">
+                        <select name="days" id="days" class="form-control {{errors.days}} ? ' border-danger':''}}">
+                          <option value="">Select Days</option>
+                          {%  for day in days %}
+                              <option value="{{day}}" {{(programDetails.day == day)?"selected":""}}>{{day}}</option>
+                          {% endfor %}
+                        </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                <div class="form-label-group">
+                  <input type="date" id="startDate" class="form-control {{errors.startDate ? ' border-danger':''}}" placeholder="Start Date" name="startDate" autofocus="autofocus"   value="{{programDetails.start_date|date("Y-m-d")}}">
+                      <label for="grade">Start Date</label>
+                      <span class="text-danger align-middle">
+                                    {% if errors.startDate %}
+                                    {{errors.startDate | first}}
+                                    {% endif %}
+                        </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="date" id="endDate" class="form-control {{errors.endDate ? ' border-danger':''}}" placeholder="End Date" name="endDate" autofocus="autofocus"   value="{{programDetails.end_date|date("Y-m-d")}}">
+                      <label for="grade">End Date</label>
+                      <span class="text-danger align-middle">
+                                    {% if errors.endDate %}
+                                    {{errors.endDate | first}}
+                                    {% endif %}
+                        </span>
+                </div>
+              </div>
+              <div class="form-group">
+                  <div class="form-label-group">
+                        <input type="text" id="programTime" class="form-control {{errors.programTime ? ' border-danger':''}}" placeholder="Enter Time" name="programTime" autofocus="autofocus"   value="{{programDetails.time}}">
+                      <label for="programTime">Enter Time</label>
+                       <span class="text-danger align-middle">
+                                {% if errors.programTime %}
+                                {{errors.programTime | first}}
+                                {% endif %}
+                    </span>
+                  </div>
+                </div>
+
+
+
+
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="text" id="grade" class="form-control {{errors.grade ? ' border-danger':''}}" placeholder="Grade" name="grade" autofocus="autofocus"   value="{{programDetails.grade}}">
+                      <label for="grade">Grade</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="text" id="position" class="form-control {{errors.position ? ' border-danger':''}}" placeholder="position" name="position" autofocus="autofocus"   value="{{programDetails.position}}">
+                      <label for="position">Position</label>
+                      <span class="text-danger align-middle">
+                                {% if errors.position %}
+                                {{errors.fee | first}}
+                                {% endif %}
+                    </span>
+                </div>
+              </div>
+
+                            <div class="form-group">
+                              <div class="form-label-group">
+                                    <select name="category" id="category" class="form-control {{errors.category}} ? ' border-danger':''}}">
+                                      <option value="">Select Category</option>
+                                      {%  for category in categories %}
+                                          <option value="{{category.id}}" {{(category.id == programDetails.program_category_id)?"selected":""}}>{{category.title}}</option>
+                                      {% endfor %}
+                                    </select>
+                                    <span class="text-danger align-middle">
+                                              {% if errors.category %}
+                                              {{errors.category | first}}
+                                              {% endif %}
+                                  </span>
+                              </div>
+                            </div>
+
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="text" id="fee" class="form-control {{errors.fee ? ' border-danger':''}}" placeholder="Fee" name="fee" autofocus="autofocus"   value="{{programDetails.fee}}">
+                      <label for="fee">Fee</label>
+                      <span class="text-danger align-middle">
+                                {% if errors.fee %}
+                                {{errors.fee | first}}
+                                {% endif %}
+                    </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-label-group">
+                  <input type="text" id="seat" class="form-control {{errors.seat ? ' border-danger':''}}" placeholder="Seat" name="seat" autofocus="autofocus"   value="{{programDetails.seat}}">
+                      <label for="seat">Seat</label>
+                      <span class="text-danger align-middle">
+                                {% if errors.seat %}
+                                {{errors.seat | first}}
+                                {% endif %}
+                    </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-label-group">
+                  <textarea  id="description" class="form-control {{errors.description ? ' border-danger':''}}" placeholder="Description" name="description" autofocus="autofocus">{{programDetails.description}}</textarea>
+                </div>
+              </div>
+              <button type="submit" name="register" class="btn btn-danger btn-block" >Update</button>
+                {{csrf.feilds | raw}}
+                <input type="hidden" name="id" value="{{programDetails.id}}">
+            </form>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+ {% block javascript %}
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="{{base_url()}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{base_url()}}/admin/js/sb-admin.min.js"></script>
+ {% endblock %}

@@ -1,0 +1,53 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Drawing Art by Young Rembrandts</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Drawing Art</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-6">
+                    <img src="{{base_url()}}/img/content/campaign/big/drawing.jpg" title="Drawing Art by Young Rembrandts" class="img-responsive img-thumbnail">
+                </div>
+                
+                <div class="col-md-6 col-lg-6">
+                    <h2>Descriptions:</h2>
+                    <p>Program conducted by Young Rembrandts. True creativity comes forth when mastery of core skills is combined with original thought. In this camp we will focus on teaching children to draw, using demonstration and a structured step-by-step process of breaking complex objects into fundamental shapes. They will also learn to draw their own characters. If taking our scratch coding camp, they can use their created characters and back ground graphics and bring them to life in a game or animation</p>
+                    <h2>In this camp they will learn a variety of art concepts like:</h2>
+                    <ul>
+                        <li>Portraiturs</li>
+                        <li>Line and patterning</li>
+                        <li>Still life</li>
+                        <li>Color theory</li>
+                        <li>Fundamental composition skill</li>
+                        <li>Perspective</li>
+                        <li>Realism / abstract</li>
+                        <li>Art Vocabulary</li>
+                    </ul>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

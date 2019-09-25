@@ -1,0 +1,48 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Fashion Runway: Drawing Workshop (10-14 yrs.)</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Fashion Runway</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/fasion.jpg" title="Fashion Runway: Drawing Workshop (10-14 yrs.)" class="img-responsive img-thumbnail">
+                </div>
+                 <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <small><b>Program conducted by Young Rembrandts</b></small>
+                    <p>
+                        
+                        This stylish Young Rembrandts workshop is tailored for the aspiring fashionista. Join us for 5 days of runway chic as we illustrate the various aspects of fashion design. Step into the shoes of a fashion magazine editor as you design and draw an eye-catching fashion magazine cover. And let’s not forget about purses! Design the perfect purse to go along with the outfit of your dreams. And finally, draw your model stepping out onto the runway in your fashion originals. If you love to design clothes and are hip to the latest fashions, this drawing workshop is a perfect fit.
+
+                    </p>
+                    
+                    
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                 </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Python Coding</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Python Coding</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/python.jpg" title="Python Coding" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <p>Ready to learn one of the most widely used programming languages in the world? Then this is the camp to sign up for. Python is a powerful, expressive programming language that's easy to learn and fun to use. As the kids strike out on your programming adventure in this class, they will start with learning programming fundamentals. The first few sessions students typically make text question-and-answer projects. The limited set of commands allows kids to think about problem-solving like a computer scientist and become comfortable with concepts like loops, conditionals, variables, and functions. Next graphics are introduced through fun projects. Python provides a friendly learning environment with graphics to allow campers to explore the extent of their creativity.</p>
+                    <h2>In this course, your student will learn:</h2>
+                    <ul>
+                        <li>Use fundamental data structures like lists, turtles, and maps </li>
+                        <li>Organize and reuse your code with functions and modules</li>
+                        <li>Use control structures like loops and conditional statements</li>
+                        <li>Draw shapes and patterns with Python's turtle module</li>
+                        <li>Functions</li>
+                        <li>Dictionaries </li>
+                        <li>Classes</li>
+                        <li>Programmers build games, create animations and solve interesting problems</li>
+
+                    </ul><br>
+                    <h2>Your student will take home:</h2>
+                    <ul>
+                        <li>Project files (required to bring their own USB drive) </li>
+
+                    </ul>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

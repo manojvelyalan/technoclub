@@ -1,0 +1,135 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Programs Offered</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li>Programs Offered</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <!--<div class="row">
+                    <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <img src="img/about-2.jpg" alt="about">
+                    </div>
+                </div>-->
+                <div class="row">
+                    <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <article>
+                            <h2>Programs Offered</h2>
+                            <div>
+                                <p>
+                                    Technology is everywhere — from your child’s classroom to their gaming console. For many kids, learning how to use a computer and code isn’t just a helpful skill, it’s a requirement for success.
+
+                                </p>
+                                <br>
+                                <p>
+                                    <b>Techno Smart Kids</b> conducts Techno Club, an afterschool program, paving the way to STEM education by providing a fun way for children to learn and grow their technology skills and get ready for the challenges of the digital world. Depending on the <b>program path and age</b>, children are introduced to software and applications such foundation classes focuses on developing  basic computer skill ,
+                                    Scratch coding introduces then to concepts of coding in a easy drag and drop environments, Pyhton introduces them to text based coding and Robotics Students will get to see firsthand how their code translates into actions that control their robot and go through the Engineering Design Process.
+                                    These skills and software help the kids to complete educational and fun projects in creative and tech savvy way in school and at home in various digital forms as all this software are either free, open sourced or easily available at home.
+                                    New Program are taught every quarter, hence the kids get to learn new software/application each quarter while building on the skills learned in earlier programs. To register your child for the Technoclub offered in your child’s school fill up the <a href="{{path_for('studentregister')}}"> Registration</a> form online and follow the steps.
+
+                                </p>
+
+                                <br>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Left Section End -->
+                </div>
+
+
+
+                  <ul class="nav nav-pills nav-justified color">
+                    {% set count = 0 %}
+                    {% for category in categories %}
+                      <li class=" {{(count == 0)?'active':''}}"><a data-toggle="tab" href="#{{category.id}}">{{category.title}}</a></li>
+                      {% set count = 1 %}
+                    {% endfor %}
+                  </ul>
+
+
+
+  <div class="tab-content">
+    {% set count = 0 %}
+    {% for category in categories %}
+        <div id="{{category.id}}" class="mt-4 tab-pane fade {{(count == 0)?'in active':''}}">
+          <h3>{{category.title}}</h3>
+          <div class="my-account">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-responsive table-bordered text-left my-orders-table">
+                                    <thead>
+                                        <tr class="first last">
+
+
+                                            <th>Programs</th>
+                                            <th>Start Date</th>
+                                            <th>End Date</th>
+                                            <th><span class="nobr">Grade</span></th>
+                                            <th>Day</th>
+                                            <th>Fees($)</th>
+                                          <!--  <th>Seats</th>-->
+                                            <th class="text-center"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        {% for program in category.programs.where('status',0) %}
+                                            <tr>
+
+                                                <td>{{program.programs}}</td>
+                                                 <td>{{ program.start_date|date("d/M/Y") }}</td>
+                                                  <td>{{ program.end_date|date("d/M/Y") }}</td>
+                                                <td>{{ (program.grade != "") ? program.grade : '-' }} </td>
+                                                <td >{{ (program.day != "") ? program.day : '-' }}</td>
+                                                <td >{{ (program.fee != "") ? program.fee : '-' }}</td>
+                                              <!--  <td class="text-success"><b >{{ (program.seat != "") ? 'Open : ' ~  program.seat : '-' }}</b></td>-->
+                                                <td class="text-center last">
+                                                    <div class="btn-group">
+                                                        <a href="{{path_for('programdetails')}}?id={{program.id}}" class="btn btn-color">Details</a>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+        </div>
+        {% set count = 1 %}
+      {% endfor %}
+    </div>
+                <div class="row">
+                    <h3>Start a Techno Club at your School/ Facility. </h3>
+                    <p>
+                        In order to start TechnoClub in your school please contact us with the day and time you would like to offer the club in your school. All you need to provide us to start the club in your school is space with power outlets, chairs and tables, white board or a projector screen. We bring all the laptops for the students to work in the club. The parents can register their child directly with Technosmart through online registration or mail. For further details please <a href="">contact us </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Main Content -->
+</section>
+{% endblock %}

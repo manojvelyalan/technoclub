@@ -1,0 +1,53 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Computer Foundation with Art 1 (7-9 yrs.)</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Computer Foundation with Art 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/digitalart-girls.jpg" title="Computer Foundation with Art 1 (7-9 yrs.)" class="img-responsive img-thumbnail">
+                    
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <p>This foundation building program focus on introducing various programs and essential skill building activities for early tech and art for kid. They will also get lot of opportunity to get proficient in basic skills using the mouse, right click, selecting, typing, formatting along with developing good computer habits of organizing and saving their work. These will help them in develop the speed and accuracy. </p>
+                    <h2>In this course, your student will:</h2>
+                    <ul>
+                        <li>Graphic arts</li>
+                        <li>Drawing art </li>
+                        <li>Multimedia slide presentations</li>                       
+                    </ul>
+                    <h2>Your student will take home:</h2>                   
+                    <ul>
+                        <li>Project files (required to bring their own USB drive) </li>
+                        
+                    </ul>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

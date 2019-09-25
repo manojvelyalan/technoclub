@@ -1,0 +1,114 @@
+{% extends "templates/app.twig"%}
+
+ {% block content %}
+     <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Robotics</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li>Robotics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Main Content-->
+
+<div class="content margin-top60 margin-bottom60">
+    <div class="container">
+        <div class="row">
+            <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <img src="{{base_url()}}/img/programs/robotics-header.png" alt="robotics">
+            </div>
+        </div>
+    
+        <div class="row padding-top40">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 welcome-three">
+                <h2 class="text-center">Robotics Path</h2>
+                <div class="col-lg-4 col-sm-4 col-md-4 col-lg-offset-2 col-sm-offset-2 col-md-offset-2">
+                    <ul>
+                        <li><label class="bold_brown_text">Grades:</label> 3-8 th Grades</li>
+                        <li><label class="bold_brown_text">Skill Level: </label> Beginner – Advanced</li>
+                        <li><label class="bold_brown_text">Path: </label> Engineering and Programming</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-md-6">
+                    <ul>
+                        <li><label class="bold_brown_text">Duration: </label> Full school Year (Split in 3 Sessions) </li>
+                        <li><label class="bold_brown_text">Prerequisite: Session 1: </label> None  , <label class="bold_brown_text">Session 2&3:</label> Session 1 or on approval</li>
+                        <li><label class="bold_brown_text">Tools/Language:</label> EV3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row padding-top40">
+            <div class="posts-block col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <img src="{{base_url()}}/img/programs/steps-to-robotics.png" alt="step to robotics">
+               
+            </div>
+        </div>
+        <div class="row padding-top40">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 welcome-three">
+                <div class="col-lg-5 col-sm-5 col-md-5">
+                    <img src="{{base_url()}}/img/programs/robotics.jpg" alt="robotics">
+                    <p>
+                    <h3>BYTES OF ROBOTICS</h3>
+                    <label class="bold_brown_text">EV31</label><br>
+                    <label class="bold_brown_text">Grades: 3-8</label><br>
+                    <label class="bold_brown_text">Duration: Yearlong (split in 3 session) </label><br>
+                    <label class="bold_brown_text">No Prior experience needed. If joining from Session 2, approval needed</label><br>
+                    <a href="{{path_for('studentregister')}}" class="btn btn-color text-capitalize">register</a>
+
+                    
+                    </p>
+                </div>
+                <div class="col-lg-7 col-sm-7 col-md-7">
+                   In this class we take a fun, hands-on approach, turning building crucial STEM (science, technology, engineering and math) skills into an engaging, memorable experience. Working in small group setting, students will develop fundamental computer programming and problem-solving competencies as they build, analyze and troubleshoot several different robotic creations. 
+                   <h4 class="padding-top25">What Students Learn</h4>
+                   <ul>
+                       <li>How to build advanced robots using the LEGO® EV3 kit.</li>
+                       <li>Discover how code translates into real-world, autonomous actions for your robot.</li>
+                       <li>Understand how to use color, gyroscope, ultrasonic, Bluetooth® and touch sensors to control a robot.</li>
+                       <li>Master essential skills for winning robotic competitions</li>
+                       <li>Collaborate and work together on project-based teams.</li>
+                    </ul>
+                   <h4 class="padding-top25">What Students Create</h4>
+                   <ul>
+                       <li>Robots that can compete in challenges and games.</li>
+                    </ul>
+                   <h4 class="padding-top25">More About This Program</h4>
+                   <p>
+                       Students will get to see firsthand how their code translates into actions that control their robot. After going through the Engineering Design Process, students will solve real-world problems to produce a competition ready robot.
+                    </p>
+                    <span class="padding-top25">Session 1</span>
+                    <ol class="margin-bottom20 margin-top15">
+                        <li>Build basic robot</li>
+                        <li>Introduced to design process</li>
+                        <li>Basic functions of EV3 programming environment</li>
+                        <li>Learn to use various sensor and forms of logic</li>
+                        <li>Participate in mini challenges </li>
+                        <li>Add on to their basic robot to compete in final competition with other teams</li>
+                    </ol>
+                    <span>Session 2 and 3</span>
+                    <ol class="margin-top15">
+                        <li>Advanced functions like Variables and complex maneuver logics</li>
+                        <li>They will apply what they learned in FLL style competition (within class teams)</li>
+                        <li>They will become more accustomed to the design process</li>
+                        <li>They will be more independent in their work.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+  {% endblock %}

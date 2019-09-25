@@ -1,0 +1,111 @@
+   {% extends "admin/templates/app.twig"%}
+{% block content %}
+    <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{{path_for('dashboard')}}">Dashboard</a>
+          </li>
+          
+          <li class="breadcrumb-item active">List All Discount</li>
+        </ol>
+
+        <!-- Page Content -->
+        <h1>List All Discounts</h1>
+        <hr>
+          <!-- DataTables Example -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+           Discounts</div>
+          <div class="card-body">
+          <a href="{{path_for('adddiscount')}}" class="btn btn-success mb-2 float-right">Create New Discounts</a>
+            <div class="table-responsive">
+           {% include 'admin/templates/partial/flash.twig'%} 
+              <table class="table table-bordered" id="tblDiscount" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Programs</th> 
+                    <th>Title</th> 
+                    <th>Start Date</th> 
+                    <th>End Date</th> 
+                    <th>Amount</th> 
+                    <th>Status</th> 
+                    <th>Created At</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                   <th>Programs</th> 
+                    <th>Title</th> 
+                    <th>Start Date</th> 
+                    <th>End Date</th> 
+                    <th>Amount</th> 
+                    <th>Status</th> 
+                    <th>Created At</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                {% for discount in discounts %}
+                    <tr >
+                        <td><a href="{{path_for('programdetails')}}?id={{discount.programId}}">{{discount.programs().first().programs| title}}</a></td>
+                        <td>{{discount.title | title}}</td>
+                        <td>{{discount.startDate | date('d/m/Y')}}</td>
+                         <td>{{discount.endDate | date('d/m/Y')}}</td>
+                        <td>{{discount.amount}}</td>
+                        <td>{{(discount.status)?'<span class="bg-success pt-2 pr-2 pl-2 pb-2 text-white">Not Active</span>':'<span class="bg-success pt-2 pr-2 pl-2 pb-2 text-white">Active</span>'}}</td>
+                        <td>{{ discount.created_at|date("d/M/Y") }}</td>
+                         <td><a  href="{{path_for('editdiscount')}}?id={{discount.id}}" class="btn btn-info "><i class="fas fa-fw  fa-edit"></i></a></td>
+                        <td><a href =""class="btn btn-danger deleteButton"  id="{{'deleteButton_' ~ discount.id}}" data-toggle="modal" data-target="#deleteModal"><i class="fas fa-fw  fa-trash"></i></a></td>
+                    </tr>                
+                 {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+  <input type="hidden" id="deleteId">
+  
+        </div>
+      <!-- /.container-fluid -->
+
+       <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Delete..?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Are you sure ??</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="{{path_for('deletediscount')}}" id="confirmDelete">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ {% endblock %}
+ {% block javascript %}
+  <!-- Bootstrap core JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery/jquery.min.js"></script>
+     <script src="{{base_url()}}/admin/js/datatable.js"></script>
+    <script src="{{base_url()}}/admin/js/bootstrap-datatable.js"></script>
+    <script src="{{base_url()}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{base_url()}}/admin/js/sb-admin.min.js"></script>
+     <script src="{{base_url()}}/admin/js/custom.js"></script>
+ {% endblock %}

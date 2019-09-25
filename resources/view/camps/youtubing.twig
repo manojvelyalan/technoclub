@@ -1,0 +1,56 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">YouTubing: Video production and editing</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>YouTubing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/youtubing.jpg" title="YouTubing: Video production and editing" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <p>
+                        Be the star of your own show with a YouTube channel you create yourself. Plan a production schedule, write the script, set up and shoot your short films, adding special effects as you edit. Learn how to post your polished pieces and build an audience. At the end of the week, share your finished videos with family and friends—and the world.
+                    </p>
+                    <h2>In this course, your student will learn:</h2>
+                    <ul>
+                        <li>Explore a range of different video styles—DIYs, screencasts</li>
+                        <li>Write script</li>
+                        <li>Edit video</li>
+                        <li>Publish on their own you tube channel</li>
+                    </ul>
+                    <br>
+                    <h2>Your student will take home:</h2>
+                    <ul>
+                        <li>Project files (required to bring their own USB drive) </li>
+
+                    </ul>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

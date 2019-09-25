@@ -1,0 +1,42 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-5">
+                            <h2 class="title">Gaming and Animation - Scratch Coding 3, Advance</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-7">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Scratch Coding 3 ( adv) </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/scratch.jpg" title="Gaming and Animation - Scratch Coding 3, Advance" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <p>Coders will advance in their programming adventure in this class by diving deeper in Scratch and get comfortable with some advance concepts like, variables, custom blocks while creating more fun projects each day of the camp.  In a friendly environment camper will be encouraged explore the extent of their creativity.</p>
+                    <p>Pre requisite: Scratch Coding 1 or intermediate level knowledge in Scratch  </p>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

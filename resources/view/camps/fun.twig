@@ -1,0 +1,54 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">FUN WITH SCIENCE – Motion and Mechanics</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Fun With Science</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/robotics.jpg" title="FUN WITH SCIENCE – Motion and Mechanics" class="img-responsive img-thumbnail">
+                </div>
+                 <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <p>Science is all-pervading in our daily lives and Science should be made fun through innovative approaches. Fun with Motion and Mechanics is a means to building a solid foundation in concepts of Physics. Young minds will be offered an opportunity to understand how things work and why. They will be encouraged to look around at their daily lives and find science in their environment, understand basic scientific concepts by asking questions and seeking answers and fuel their imagination by combining active, hands-on/minds-on STEM learning experiences.</p>
+                    <h2>In this course, your student will learn concepts like:</h2>
+                    <ul>
+                        <li>What makes an object move? </li>
+                        <li>What is Balance of Forces? </li>
+                        <li>What are the Laws of Motion? </li>
+                        <li>What does a machine do? </li>
+                        <li>Understand what are park mechanics?</li>
+                        <li>Create their own models and projects to take home! </li>
+
+                    </ul>
+                    <p>This course helps develop their confidence, communication skills and ability to scientifically understand things around them through researching, testing, organizing data, analyzing and problem solving. All while having FUN!</p>
+                    <h2>Your student will take home:</h2>
+                    <p>Project and model</p>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                 </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

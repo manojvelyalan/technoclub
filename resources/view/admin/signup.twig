@@ -1,0 +1,106 @@
+{% extends "admin/templates/app.twig"%}
+{% block content %}
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{{path_for('dashboard')}}">Dashboard</a>
+      </li>
+      <li class="breadcrumb-item active">CreateAccount</li>
+    </ol>
+    <!-- Page Content -->
+    <h1>Create Account</h1>
+    <hr>
+     <div class="card  mx-auto mt-5 mb-5">
+      <div class="card-header">Create Account</div>
+      <div class="card-body">
+        <form method="post" action="{{path_for('adminsignup')}}">
+        {% include 'admin/templates/partial/flash.twig'%} 
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="text" id="firstName" class="form-control {{errors.firstName ? ' border-danger':''}}" placeholder="First name" name="firstName" autofocus="autofocus"   value="{{old.firstName}}">
+                  <label for="firstName">First name</label>
+                  <span class="text-danger align-middle">
+                            {% if errors.firstName %}
+                            {{errors.firstName | first}}
+                            {% endif %}
+                        </span>
+
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="text" id="lastName" class="form-control {{errors.lastName ? ' border-danger':''}}" placeholder="Last name" name="lastName" value="{{old.lastName}}">
+                  <label for="lastName">Last name</label>
+                  <span class="text-danger align-middle">
+                            {% if errors.lastName %}
+                            {{errors.lastName | first}}
+                            {% endif %}
+                        </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" class="form-control {{errors.email ? ' border-danger':''}}" placeholder="Email address"  name="email"  value="{{old.email}}">
+              <label for="inputEmail">Email address</label>
+              <span class="text-danger align-middle">
+                            {% if errors.email %}
+                            {{errors.email | first}}
+                            {% endif %}
+                        </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="password" id="inputPassword" class="form-control {{errors.password ? ' border-danger':''}}" placeholder="Password"  name="password">
+                  <label for="inputPassword">Password</label>
+                  <span class="text-danger align-middle">
+                            {% if errors.password %}
+                            {{errors.password | first}}
+                            {% endif %}
+                        </span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="password" id="confirmPassword" class="form-control {{errors.confirmPassword ? ' border-danger':''}}" name="confirmPassword" placeholder="Confirm password"  >
+                  <label for="confirmPassword">Confirm password</label>
+                  <span class="text-danger align-middle">
+                            {% if errors.confirmPassword %}
+                            {{errors.confirmPassword | first}}
+                            {% endif %}
+                        </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" name="register" class="btn btn-primary btn-block" >Register</button>
+           {{csrf.feilds | raw}}
+        </form>
+        <!--<div class="text-center">
+          <a class="d-block small mt-3" href="{{path_for('adminsignin')}}">Login Page</a>
+         <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+        </div>-->
+      </div>
+    </div>
+    
+
+</div>
+{% endblock %}
+ {% block javascript %}
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="{{base_url()}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{base_url()}}/admin/js/sb-admin.min.js"></script>
+ {% endblock %}

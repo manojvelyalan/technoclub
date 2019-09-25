@@ -1,0 +1,63 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Art Blend ( 8 -11 yrs.) </h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Art Blend</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/artblend.jpg" title="Art Blend" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <p>
+                        Creativity comes forth when mastery of core skills is combined with original thought. In this camp, kids will be engaging in creating both Digital art and Drawing art and build the skills in both medium of creating art. They will create digital art using various graphic tools and learn to do image manipulations which involves transforming or altering a photograph using various methods and techniques to get desired results. If into Scratch coding and gaming, they may use their created graphics and give them life in their own animation and games
+
+                    </p>
+                    <p>
+                        In drawing art sessions, they will learn how to draw by breaking down complex object into foundation shapes. They will learn variety of art concepts which will help develop the skill, and confidence to continue participating in the arts.
+
+                    </p>
+                    <h2>In this course, your student will learn:</h2>
+                    <ul>
+                        <li>Creating graphics in MS paint </li>
+                        <li>Image editing and creating digital art using PhotoFilter application</li>
+                        <li>Step by step hand drawing</li>
+                        
+                    </ul><br>
+                    <h2>Your student will take home:</h2>
+                    <ul>
+                        <li>Project files (required to bring their own USB drive on Day1) </li>
+                        <li>Free Photofiltre application</li>
+                        <li>Hand drawn art</li>
+                        <li>Digital Portfolio of all the art created</li>
+                        
+                    </ul>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

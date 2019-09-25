@@ -1,0 +1,100 @@
+   {% extends "admin/templates/app.twig"%}
+{% block content %}
+    <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{{path_for('dashboard')}}">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{{path_for('listallprograms')}}">List All Programs</a>
+          </li>
+          <li class="breadcrumb-item active">Program Details</li>
+        </ol>
+
+        <!-- Page Content -->
+        <h1>Program Details</h1>
+        <hr>
+          <!-- DataTables Example -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Details  </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <th>Programs</th>
+                        <td>{{details.programs| title}}</td>
+                    </tr>
+                      <tr>
+                        <th>Start Date</th>
+                        <td>{{details.start_date| date('d/M/Y')}}</td>
+                    </tr>
+                      <tr>
+                        <th>End Date</th>
+                        <td>{{details.end_date| date('d/M/Y')}}</td>
+                    </tr>
+                      <tr>
+                        <th>Time</th>
+                        <td>{{details.time}}</td>
+                    </tr>
+                      <tr>
+                        <th>Grade</span></th>
+                        <td>{{details.grade}}</td>
+                    </tr>
+                      <tr>
+                        <th>Day</th>
+                        <td>{{details.day}}</td>
+                    </tr>
+                      <tr>
+                        <th>Seats</th>
+                        <td>{{details.seat}}</td>
+                    </tr>
+                    <tr>
+                        <th>Fee</th>
+                        <td>{{details.fee}}</td>
+                    </tr>
+                    <tr>
+                        <th>Position</th>
+                        <td>{{details.position}}</td>
+                    </tr>
+                    <tr>
+                        <th>Program Category</th>
+                        <td>{{details.category.title}}</td>
+                    </tr>
+                      <tr>
+                        <th>Details</th>
+                        <td>{{details.description}}</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>{{(details.status)?'<span class="bg-success pt-2 pr-2 pl-2 pb-2 text-white">Not Active</span>':'<span class="bg-success pt-2 pr-2 pl-2 pb-2 text-white">Active</span>'}}</td>
+                    </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+             <div class="card-footer small text-muted">Created On {{ details.created_at|date("d/M/Y") }}</div>
+        </div>
+
+      </div>
+
+      </div>
+      <!-- /.container-fluid -->
+ {% endblock %}
+ {% block javascript %}
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="{{base_url()}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{base_url()}}/admin/js/sb-admin.min.js"></script>
+ {% endblock %}

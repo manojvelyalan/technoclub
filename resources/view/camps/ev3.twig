@@ -1,0 +1,53 @@
+{% extends "templates/app.twig"%}
+
+{% block content %}
+    <section id="main">
+        <div class="breadcrumb-wrapper">
+            <div class="pattern-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <h2 class="title">Robotics with Ev3</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                            <div class="breadcrumbs pull-right">
+                                <ul>
+                                    <li>You are Now on:</li>
+                                    <li><a href="{{path_for('home')}}">Home</a></li>
+                                    <li><a href="{{url}}">{{pageName}}</a></li>
+                                    <li>Robotics with Ev3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="content margin-top60 margin-bottom60">
+            <div class="container">
+                <div class="col-md-6 col-lg-5">
+                    <img src="{{base_url()}}/img/content/campaign/big/robotics.jpg" title="Robotics with Ev3" class="img-responsive img-thumbnail">
+                </div>
+                <div class="col-md-6 col-lg-7">
+                    <h2>Descriptions:</h2>
+                    <p>
+                        In this camp we take a fun, hands-on approach, turning building crucial STEM (science, technology, engineering and math) skills into an engaging, memorable experience. Working in small group setting, students will develop fundamental computer programming and problem-solving competencies as they build, analyze and troubleshoot several different robotic creations.
+
+                    </p>
+                    <h2>In this course, your student will learn:</h2>
+                    <ul>
+                        <li>How to build advanced robots using the LEGO® EV3 kit.</li>
+                        <li>Discover how code translates into real-world, autonomous actions for your robot</li>
+                        <li>Understand how to use color, gyroscope, ultrasonic, Bluetooth® and touch sensors to control a robot</li>
+                        <li>Master essential skills for winning robotic competitions</li>
+                        <li>Collaborate and work together on project-based teams</li>
+
+                    </ul>
+                    <a href="https://goo.gl/forms/JlKF8ynfECQtVJOx1" class="btn btn-color pull-right btn-large">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

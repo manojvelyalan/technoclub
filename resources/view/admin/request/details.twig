@@ -1,0 +1,200 @@
+   {% extends "admin/templates/app.twig"%}
+{% block content %}
+    <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="{{path_for('dashboard')}}">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="{{path_for('viewallrequest')}}">List All Request</a>
+            </li>
+            <li class="breadcrumb-item active">Request Details</li>
+        </ol>
+        <!-- Page Content -->
+        <h1>Request Details</h1>
+        <hr>
+        <div class="card mb-3">
+            <div class="card-header"><i class="fas fa-table"></i>Personnel Details  </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <tbody>
+                          <tr>
+                              <th>Name</th>
+                              <td>{{request.first_name ~ " " ~ request.last_name}}</td>
+                          </tr>
+                          <tr>
+                              <th>Email</th>
+                              <td>{{request.email}}</td>
+                          </tr>
+                          <tr>
+                              <th>Phone</th>
+                              <td>{{request.phone}}</td>
+                          </tr>
+                          <tr>
+                              <th>Age</th>
+                              <td>{{request.age}}</td>
+                          </tr>
+                          <tr>
+                              <th>Parent Name</th>
+                              <td>{{request.parent_name}}</td>
+                          </tr>
+                          <tr>
+                              <th>Emergency Contact Number</th>
+                              <td>{{request.emergency_number}}</td>
+                          </tr>
+                          <tr>
+                              <th>Emergency Contact Name</th>
+                              <td>{{request.emergency_name}}</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>  
+          </div>
+
+          <div class="card mb-3">
+            <div class="card-header"><i class="fas fa-table"></i>Program / Session Details  </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>         
+                    <th class="td-name">Programs / Session Name</th>
+                    <th class="td-price">Unit Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for program in programs %}
+                    {% set discountDetails = request.getDiscount(program.id) %}                       
+                    <tr>                                       
+                        <td class="td-name">{{program.programs}}</td>
+                        <td class="td-price">${{program.fee | number_format(2,".","")}}</td>
+                    </tr>   
+                  {% endfor %}  
+                  <tr>                                       
+                      <td class="td-name text-right">Total Amount</td>
+                      <td class="td-price">${{request.total_amount | number_format(2,".","")}}</td>
+                        
+                  </tr>  
+                </tbody>
+              
+              </table>
+          </div>
+        </div>
+      
+      </div>
+      <div class="card mb-3">
+          <div class="card-header"><i class="fas fa-table"></i>Discount Details  </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>         
+                        <th class="td-name">Programs / Session Name</th>
+                        <th class="td-price">Discount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for discount in discounts %}      
+                                    
+                        <tr>                                       
+                            <td class="td-name">{{discount.programs.programs}}</td>
+                            <td class="td-price">${{discount.amount | number_format(2,".","")}}</td>
+                        </tr>   
+                      {% endfor %}  
+                      <tr>                                       
+                          <td class="td-name text-right">Discount Amount</td>
+                          <td class="td-price">${{request.discount_amount | number_format(2,".","")}}</td>
+                            
+                      </tr>
+                    </tbody>
+                  
+                  </table>
+            </div>
+          </div>   
+      </div>    
+
+      <div class="card mb-3">
+          <div class="card-header"><i class="fas fa-table"></i>Payment Details  </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <tbody>
+                      <tr>
+                        <th>Total Payable Amount</th>
+                        <td>${{request.grand_total | number_format(2,".","")}}</td>
+                      </tr>
+                      <tr>
+                        <th>Transaction Id</th>
+                        <td>{{payment.transaction_id}}</td>
+                      </tr>
+                      <tr>
+                        <th>Received Amount</th>
+                        <td>${{payment.paid_amount | number_format(2,".","")}}</td>
+                      </tr>
+                      <tr>
+                        <th>Payment Status</th>
+                        <td>{{payment.payment_status}}</td>
+                      </tr>
+                      <tr>
+                        <th>Payment Date</th>
+                        <td>{{payment.created_at | date('M/d/Y')}}</td>
+                      </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+
+           <div class="card mb-3">
+          <div class="card-header"><i class="fas fa-table"></i> School Details  </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <th>School Name</th>
+                        <td>{{request.school_name}}</td>
+                    </tr>
+                    <tr>
+                        <th>Programs / Session Name</th>
+                        <td>{{request.programs().first().programs}}</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>Pick Up</th>
+                        <td>{{request.pickup().first().title}}</td>
+                    </tr>
+                    <tr>
+                        <th>Grade</th>
+                        <td>{{request.grade}}</td>
+                    </tr>
+                    <tr>
+                        <th>Usb</th>
+                        <td>{{(request.is_usb)?"I would like Techno Smart Kids to provide 1 USB flash drive of 2GB for $6.00":"I will bring my own"}}</td>
+                    </tr>
+                </tbody>
+                
+              </table>
+            </div>
+          </div>
+      
+          <div class="card-footer small text-muted">Created On {{ request.created_at|date("d/M/Y") }}
+          </div>
+        </div>
+
+    </div>     
+ {% endblock %}
+ {% block javascript %}
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery/jquery.min.js"></script>
+    <script src="{{base_url()}}/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{base_url()}}/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{base_url()}}/admin/js/sb-admin.min.js"></script>
+ {% endblock %}
