@@ -46,10 +46,9 @@ $app  = new \Slim\App([
       'prefix'=>''
   ],
   'paypalConfig'=>[
-    //'client_id' => 'AaPClu7Ajj7Q0ROFOV99kk5Q60lsxtkjn451lQfrEnHIiHD4wCWgPo8WWBAbZb_WcMZ1tryc0lcwtkMG',
-   // 'client_secret' => 'EN9QIg-cw5dACA67m8ZI1oJGPXYWp-ufRNCJ5WWD8bO3JqQZdGbqUCifQF_1LEe-cx0kx_qDZDZsyLAK',
-   'client_id' => 'AT9pJ4XpiEIAxdQgAWxUPhsCLSTRgsRfizI99TYtkqvui9iRK9onJd9wL3Jb7Um2Rbf_z1LhXpOb46BJ',
-    'client_secret' => 'EDvPk474rtHfBWEJ-kjAZuq8pVM2IFzAO6i7vosC2eVuBHtZ7BxOTwpQlrPkja4gqhDX4W73SmrDsosL',
+  
+   'client_id' => '***********',
+    'client_secret' => '*********',
     'return_url' => 'https://technosmartkids.com/payment/response',
     'cancel_url' => 'https://technosmartkids.com/payment/cancelled',
     'enableSandbox'=>false,
